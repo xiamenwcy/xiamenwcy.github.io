@@ -1,0 +1,1330 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="google665dc409a97df934" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="fonts.lug.ustc.edu.cn/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="opencv," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="下面我们将介绍Mexopencv的使用。首先介绍几个常用的帮助链接：  MATLAB File Help: cv ：这里列出了cv里的全部函数 OpenCV 2.3.2 documentation :这里可以搜索到opencv的函数 mexopencv Github主页 mexopencv主页 mex interface for opencv library">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mexopencv的使用">
+<meta property="og:url" content="http://yoursite.com/2015/07/14/mexopencv/index.html">
+<meta property="og:site_name" content="生如蚁，美如神">
+<meta property="og:description" content="下面我们将介绍Mexopencv的使用。首先介绍几个常用的帮助链接：  MATLAB File Help: cv ：这里列出了cv里的全部函数 OpenCV 2.3.2 documentation :这里可以搜索到opencv的函数 mexopencv Github主页 mexopencv主页 mex interface for opencv library">
+<meta property="og:image" content="https://dn-xiamenwcy.qbox.me/mex/img001.jpg">
+<meta property="og:image" content="https://dn-xiamenwcy.qbox.me/mex/surf_desc.jpg">
+<meta property="og:image" content="https://dn-xiamenwcy.qbox.me/mex/face.jpg">
+<meta property="article:published_time" content="2015-07-14T13:55:52.000Z">
+<meta property="article:modified_time" content="2017-07-02T05:55:12.000Z">
+<meta property="article:author" content="Caiyong Wang">
+<meta property="article:tag" content="opencv">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dn-xiamenwcy.qbox.me/mex/img001.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/07/14/mexopencv/"/>
+
+
+
+
+
+  <title>Mexopencv的使用 | 生如蚁，美如神</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1260315408&web_id=1260315408" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">生如蚁，美如神</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">既然选择了远方，便只顾风雨兼程。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-program">
+          <a href="/program/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-pencil"></i> <br />
+            
+            项目
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/07/14/mexopencv/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Caiyong Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/dudu.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="生如蚁，美如神">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Mexopencv的使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-14T21:55:52+08:00">
+                2015-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Matlab/" itemprop="url" rel="index">
+                    <span itemprop="name">Matlab</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>下面我们将介绍Mexopencv的使用。<br>首先介绍几个常用的帮助链接：</p>
+<ol>
+<li><a href="http://kyamagu.github.io/mexopencv/matlab/" target="_blank" rel="noopener">MATLAB File Help: cv</a> ：这里列出了cv里的全部函数</li>
+<li><a href="http://www.opencv.org.cn/opencvdoc/2.3.2/html/index.html" target="_blank" rel="noopener">OpenCV 2.3.2 documentation</a> :这里可以搜索到opencv的函数</li>
+<li><a href="https://github.com/kyamagu/mexopencv/tree/v2.4" target="_blank" rel="noopener">mexopencv Github主页</a></li>
+<li><a href="http://kyamagu.github.io/mexopencv/" target="_blank" rel="noopener">mexopencv主页</a></li>
+<li><a href="http://kyamagu.github.io/mexopencv/html/" target="_blank" rel="noopener">mex interface for opencv library</a><a id="more"></a>
+
+</li>
+</ol>
+<h2 id="添加Mexopencv的路径"><a href="#添加Mexopencv的路径" class="headerlink" title="添加Mexopencv的路径"></a>添加Mexopencv的路径</h2><p>方法一：在matlab中找到Set Path选项，添加mexopencv路径;<br>方法二：addpath(‘/path to mexopencv’);如我的路径为：<br><code>addpath(&#39;D:/Program Files/mexopencv-2.4&#39;);</code></p>
+<h2 id="命名符的使用"><a href="#命名符的使用" class="headerlink" title="命名符的使用"></a>命名符的使用</h2><p>在程序中，我们既可以使用带有cv.*的函数，也可以先载入包名，然后直接使用函数，就像C++一样。如： </p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">img = imread(<span class="string">'1.jpg'</span>);</span><br><span class="line">img2=im2double(img);</span><br><span class="line">myKnernel = [<span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>;<span class="number">-1</span>, <span class="number">5</span>, <span class="number">-1</span>; <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>];</span><br><span class="line">result = cv.filter2D(img2, myKnernel);  <span class="comment">% with package name 'cv'</span></span><br><span class="line">import cv.*;</span><br><span class="line">result =filter2D(img2, myKnernel);  <span class="comment">% with package name 'cv'</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：一些函数如cv.imread 重载了MATLAB中的内建函数。如果你想避免命名冲突，可以使用作用域名字,即使用cv.*。</p>
+<h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><p>在Matlab可以通help command查找相关函数列表。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; help cv; <span class="comment">% shows list of functions in package 'cv'</span></span><br><span class="line"></span><br><span class="line">Contents of cv:</span><br><span class="line"></span><br><span class="line">GaussianBlur                   - Smoothes an image using a Gaussian filter</span><br><span class="line">Laplacian                      - Calculates the Laplacian of an image</span><br><span class="line">VideoCapture                   - VideoCapture wrapper class</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&gt;&gt; help cv.VideoCapture; <span class="comment">% shows documentation of VideoCapture</span></span><br><span class="line"></span><br><span class="line">VIDEOCAPTURE  VideoCapture wrapper class</span><br><span class="line"></span><br><span class="line"> Class <span class="keyword">for</span> video capturing from video files or cameras. The class</span><br><span class="line"> provides MATLAB API <span class="keyword">for</span> capturing video from cameras or <span class="keyword">for</span> reading</span><br><span class="line"> video files. Here is how the class can be used:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p> mexopencv里面包含了一个简实用文档，可以生成MATLAB的HTML帮助文件。如下命令可以在doc/matlab/下生成用户手册。<br>首先设置matlab当前目录为 D:\Program Files\mexopencv-2.4<br>然后键入：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addpath(<span class="string">'utils'</span>);</span><br><span class="line">MDoc;</span><br></pre></td></tr></table></figure>
+<p>你可以运行由test路径下的UnitTest类生成的测试函数。里面包含了mexopencv支持的各种函数功能，一旦出现PASS,说明此功能正常，可以使用。</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addpath(<span class="string">'test'</span>);</span><br><span class="line">UnitTest;</span><br></pre></td></tr></table></figure>
+<p>执行完后，出现如下结果：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">== TestANN_MLP ======</span><br><span class="line">-- test_1 ------</span><br><span class="line">PASS</span><br><span class="line">== TestAdaptiveThreshold ======</span><br><span class="line">-- test_1 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_2 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_3 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_4 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_5 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_error_1 ------</span><br><span class="line">PASS</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>查看samples/文件夹，发现里面共有五个文件,均是mexopencv的具体应用。下面我们将具体讲解其中的三个例子。<br>以下示例均需先加入mexopencv的路径到matlab的path中，并且将samples/加入路径,用代码表达为：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addpath(<span class="string">'D:/Program Files/mexopencv-2.4'</span>);<span class="comment">%载入Mexopencv路径</span></span><br><span class="line">addpath(<span class="string">'samples'</span>);<span class="comment">%载入sample路径</span></span><br></pre></td></tr></table></figure>
+<h3 id="SURF-detector-m"><a href="#SURF-detector-m" class="headerlink" title="SURF_detector.m"></a>SURF_detector.m</h3><p>用于显示图片特征点</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SURF_detector</span></span></span><br><span class="line"><span class="comment">%SURF_DETECTOR  feature detector demo</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="comment">% Before start, addpath('/path/to/mexopencv');</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%载入图像，并转化为灰度图</span></span><br><span class="line">im = imread(fullfile(mexopencv.root(),<span class="string">'test'</span>,<span class="string">'img001.jpg'</span>));</span><br><span class="line"><span class="comment">%这里fullfile为定义文件的全路径，可以查看帮助</span></span><br><span class="line">im = cv.cvtColor(im,<span class="string">'RGB2GRAY'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%设置特征检测方法，这里使用SUFT，也可以使用SIFT或者ORB</span></span><br><span class="line">detector = cv.FeatureDetector(<span class="string">'SURF'</span>);</span><br><span class="line">keypoints = detector.detect(im);</span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制特征点，并显示</span></span><br><span class="line">im_keypoints = cv.drawKeypoints(im,keypoints);</span><br><span class="line">imshow(im_keypoints);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>运行 SURF_detector，即可出现特征点图。如下：<br><img src="https://dn-xiamenwcy.qbox.me/mex/img001.jpg" alt=""></p>
+<h3 id="SURF-descriptor-m"><a href="#SURF-descriptor-m" class="headerlink" title="SURF_descriptor.m"></a>SURF_descriptor.m</h3><p>用于计算特征点的特征向量(或者叫特征描述子）</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SURF_descriptor</span></span></span><br><span class="line"><span class="comment">%SURF_DETECTOR  feature detector demo</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="comment">% Before start, addpath('/path/to/mexopencv');</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%载入图并转为灰度图</span></span><br><span class="line">im1 = imread(fullfile(mexopencv.root(),<span class="string">'test'</span>,<span class="string">'img001.jpg'</span>));</span><br><span class="line">im1 = cv.cvtColor(im1,<span class="string">'RGB2GRAY'</span>);</span><br><span class="line">im2 = <span class="built_in">fliplr</span>(im1);<span class="comment">%将图像左右翻转</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%使用SURF特征检测方法检测特征点</span></span><br><span class="line">detector = cv.FeatureDetector(<span class="string">'SURF'</span>);</span><br><span class="line">keypoints1 = detector.detect(im1);</span><br><span class="line">keypoints2 = detector.detect(im2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%提取特征向量</span></span><br><span class="line">extractor = cv.DescriptorExtractor(<span class="string">'SURF'</span>);</span><br><span class="line">descriptors1 = extractor.compute(im1,keypoints1);</span><br><span class="line">descriptors2 = extractor.compute(im1,keypoints2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%进行特征匹配，这里使用基于L2距离（即欧式距离）的暴力搜索</span></span><br><span class="line">matcher = cv.DescriptorMatcher(<span class="string">'BruteForce'</span>);</span><br><span class="line"><span class="comment">%  'BruteForce'             L2 distance</span></span><br><span class="line"><span class="comment">%  'BruteForce-L1'          L1 distance</span></span><br><span class="line"><span class="comment">%  'BruteForce-Hamming'     Hamming distance</span></span><br><span class="line"><span class="comment">%  'BruteForce-HammingLUT'  Hamming distance lookup table</span></span><br><span class="line"><span class="comment">%  'FlannBased'             Flann-based indexing</span></span><br><span class="line"> </span><br><span class="line">matches = matcher.match(descriptors1,descriptors2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制特征匹配图</span></span><br><span class="line">im_matches = cv.drawMatches(im1, keypoints1, im2, keypoints2, matches);</span><br><span class="line">imshow(im_matches);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>运行SURF_descriptor，即可出线下图：<br><img src="https://dn-xiamenwcy.qbox.me/mex/surf_desc.jpg" alt=""></p>
+<h3 id="facedetect-m"><a href="#facedetect-m" class="headerlink" title="facedetect.m"></a>facedetect.m</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">facedetect</span></span></span><br><span class="line"><span class="comment">%FACEDETECT  face detection demo</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="comment">% Before start, addpath('/path/to/mexopencv');</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">'Face detection demo. Press any key when done.'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% Load cascade file</span></span><br><span class="line">xml_file = fullfile(mexopencv.root(),<span class="string">'test'</span>,<span class="string">'haarcascade_frontalface_alt2.xml'</span>);</span><br><span class="line">classifier = cv.CascadeClassifier(xml_file);</span><br><span class="line"></span><br><span class="line"><span class="comment">% Set up camera</span></span><br><span class="line">camera = cv.VideoCapture;</span><br><span class="line">pause(<span class="number">3</span>); <span class="comment">% Necessary in some environment. See help cv.VideoCapture</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Set up display window</span></span><br><span class="line">window = <span class="built_in">figure</span>(<span class="string">'KeyPressFcn'</span>,@(obj,evt)setappdata(obj,<span class="string">'flag'</span>,<span class="built_in">true</span>));</span><br><span class="line">setappdata(window,<span class="string">'flag'</span>,<span class="built_in">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% Start main loop</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">true</span></span><br><span class="line">    <span class="comment">% Grab and preprocess an image</span></span><br><span class="line">    im = camera.read;</span><br><span class="line">    im = cv.resize(im,<span class="number">0.5</span>);</span><br><span class="line">    gr = cv.cvtColor(im,<span class="string">'RGB2GRAY'</span>);</span><br><span class="line">    gr = cv.equalizeHist(gr);<span class="comment">%直方图均衡化</span></span><br><span class="line">    <span class="comment">% Detect</span></span><br><span class="line">    boxes = classifier.detect(gr,<span class="string">'ScaleFactor'</span>,<span class="number">1.3</span>,...</span><br><span class="line">                                 <span class="string">'MinNeighbors'</span>,<span class="number">2</span>,...</span><br><span class="line">                                 <span class="string">'MinSize'</span>,[<span class="number">30</span>,<span class="number">30</span>]);</span><br><span class="line">    <span class="comment">% Draw results</span></span><br><span class="line">    imshow(im);</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="built_in">numel</span>(boxes)</span><br><span class="line">        rectangle(<span class="string">'Position'</span>,boxes&#123;<span class="built_in">i</span>&#125;,<span class="string">'EdgeColor'</span>,<span class="string">'g'</span>,<span class="string">'LineWidth'</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">% Terminate if any user input</span></span><br><span class="line">    flag = getappdata(window,<span class="string">'flag'</span>);</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isempty</span>(flag)||flag, <span class="keyword">break</span>; <span class="keyword">end</span></span><br><span class="line">    pause(<span class="number">0.1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Close</span></span><br><span class="line">close(window);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>运行facedetect，即可出线人脸框，可以进行人脸识别.<br>如图：<br><img src="https://dn-xiamenwcy.qbox.me/mex/face.jpg" alt=""></p>
+<h2 id="发展一个新的-MEX-函数"><a href="#发展一个新的-MEX-函数" class="headerlink" title="发展一个新的 MEX 函数"></a>发展一个新的 MEX 函数</h2><p>你所需要做的就是在src/+cv/增加你的MEX源文件。如果你想要增加一个叫myfunc的MEX文件，创建src/+cv/myfunc.cpp. myfunc.cpp将看起来如下：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include "mexopencv.hpp"</span><br><span class="line">void mexFunction(int nlhs, mxArray *plhs[],</span><br><span class="line">                 int nrhs, const mxArray *prhs[])</span><br><span class="line">&#123;</span><br><span class="line">    // Check arguments</span><br><span class="line">    <span class="keyword">if</span> (nlhs!=<span class="number">1</span> || nrhs!=<span class="number">1</span>)</span><br><span class="line">        mexErrMsgIdAndTxt(<span class="string">"myfunc:invalidArgs"</span>, <span class="string">"Wrong number of arguments"</span>);</span><br><span class="line"></span><br><span class="line">    // Convert MxArray to cv::Mat</span><br><span class="line">    cv::Mat mat = MxArray(prhs[<span class="number">0</span>]).toMat();</span><br><span class="line"></span><br><span class="line">    // Do whatever you want</span><br><span class="line"></span><br><span class="line">    // Convert cv::Mat back to mxArray*</span><br><span class="line">    plhs[<span class="number">0</span>] = MxArray(mat);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个例子简单地复制input到<strong>cv::Mat</strong>对象，然后再复制到输出对象。注意到<strong>MxArray</strong>转化为<strong>cv::Mat</strong> 对象是通过<strong>mexopencv</strong>来实现的。当然了你想要做更多的事情。一旦你创建好一个文件后，键入<strong>mexopencv.make</strong>去建立你的新函数。编译好的MEX函数将会出现在<strong>+cv/</strong>中，你可以在MATLAB中使用<strong>cv.myfunc</strong>来使用它。</p>
+<p><strong>mexopencv.hpp</strong> 头文件包含了一个类 <strong>MxArray</strong> 去操作 <strong>mxArray</strong> 对象. 大多数情况下这个被用来进行 OpenCV 数据类型和  mxArray的转化。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">int <span class="built_in">i</span>            = MxArray(prhs[<span class="number">0</span>]).toInt();</span><br><span class="line">double d         = MxArray(prhs[<span class="number">0</span>]).toDouble();</span><br><span class="line">bool b           = MxArray(prhs[<span class="number">0</span>]).toBool();</span><br><span class="line">std::string s    = MxArray(prhs[<span class="number">0</span>]).toString();</span><br><span class="line">cv::Mat mat      = MxArray(prhs[0]).toMat();   // For pixels</span><br><span class="line">cv::Mat ndmat    = MxArray(prhs[0]).toMatND(); // For N-D array</span><br><span class="line">cv::Point pt     = MxArray(prhs[<span class="number">0</span>]).toPoint();</span><br><span class="line">cv::Size siz     = MxArray(prhs[<span class="number">0</span>]).toSize();</span><br><span class="line">cv::Rect rct     = MxArray(prhs[<span class="number">0</span>]).toRect();</span><br><span class="line">cv::Scalar sc    = MxArray(prhs[<span class="number">0</span>]).toScalar();</span><br><span class="line">cv::SparseMat sp = MxArray(prhs[0]).toSparseMat(); // Only double to float</span><br><span class="line"></span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(<span class="built_in">i</span>);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(d);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(b);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(s);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(mat);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(ndmat);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(pt);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(siz);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(rct);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(sc);</span><br><span class="line">plhs[0] = MxArray(sp); // Only 2D float to double</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>Enjoy it ? Donate me !  欣赏此文？求鼓励，求支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/weixinpay.png" alt="Caiyong Wang WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/alipay.jpg" alt="Caiyong Wang Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/opencv/" rel="tag"># opencv</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/07/14/vs-mex/" rel="next" title="VS2010和Matlab混合编程 ---调试Mex文件">
+                <i class="fa fa-chevron-left"></i> VS2010和Matlab混合编程 ---调试Mex文件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/07/26/svd/" rel="prev" title="奇异值分解（SVD）介绍">
+                奇异值分解（SVD）介绍 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTI4MS81ODQ5"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/dudu.gif"
+               alt="Caiyong Wang" />
+          <p class="site-author-name" itemprop="name">Caiyong Wang</p>
+           
+              <p class="site-description motion-element" itemprop="description">绳锯木断,水滴石穿</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiamenwcy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://blog.csdn.net/xiamentingtao" target="_blank" title="CSDN">
+                  
+                    <i class="fa fa-fw fa-edit"></i>
+                  
+                  CSDN
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://caiyong.wang" target="_blank" title="主页">
+                  
+                    <i class="fa fa-fw fa-home"></i>
+                  
+                  主页
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://wangcaiyong.lofter.com/" target="_blank" title="Lofter">
+                  
+                    <i class="fa fa-fw fa-camera-retro"></i>
+                  
+                  Lofter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xiamenwcy" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/yong-wang-15" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-question-circle"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.xju.edu.cn/" title="新疆大学" target="_blank">新疆大学</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.xmu.edu.cn/" title="厦门大学" target="_blank">厦门大学</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.ia.cas.cn/" title="中科院自动化所" target="_blank">中科院自动化所</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.in66.com/" title="我的生活in记" target="_blank">我的生活in记</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.nlpr.ia.ac.cn/CN/model/index.shtml" title="模式识别国家重点实验室" target="_blank">模式识别国家重点实验室</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加Mexopencv的路径"><span class="nav-number">1.</span> <span class="nav-text">添加Mexopencv的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命名符的使用"><span class="nav-number">2.</span> <span class="nav-text">命名符的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#帮助"><span class="nav-number">3.</span> <span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举例说明"><span class="nav-number">4.</span> <span class="nav-text">举例说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SURF-detector-m"><span class="nav-number">4.1.</span> <span class="nav-text">SURF_detector.m</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SURF-descriptor-m"><span class="nav-number">4.2.</span> <span class="nav-text">SURF_descriptor.m</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#facedetect-m"><span class="nav-number">4.3.</span> <span class="nav-text">facedetect.m</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发展一个新的-MEX-函数"><span class="nav-number">5.</span> <span class="nav-text">发展一个新的 MEX 函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Caiyong Wang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

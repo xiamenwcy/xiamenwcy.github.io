@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello Next</title>
+    <url>/2020/04/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<a id="more"></a> 
+
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="Next主题新特性"><a href="#Next主题新特性" class="headerlink" title="Next主题新特性"></a>Next主题新特性</h2><p>最近更新了博客，从<a href="https://github.com/wuchong/jacman" target="_blank" rel="noopener">jacman</a>迁移到<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">next</a>,如下是一些新特性测试。</p>
+<h3 id="测试标签"><a href="#测试标签" class="headerlink" title="测试标签"></a>测试标签</h3><blockquote class="blockquote-center"><p>厦门大学欢迎你 </p>
+</blockquote>
+
+<p>代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125; 厦门大学欢迎你 &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="测试图标"><a href="#测试图标" class="headerlink" title="测试图标"></a>测试图标</h3><p><span style="color:red"><i class="fa fa-file-pdf-o fa-fw "></i>&nbsp;<a href="https://dn-xiamenwcy.qbox.me/sdm/Extended%20Supervised%20Descent%20Method%20for%20Robust%20Face%20Alignment.pdf" target="_blank" rel="noopener">Extended Supervised Descent Method for Robust Face Alignment</a></span></p>
+<p>示例代码:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span style&#x3D;&quot;color:red&quot;&gt;&lt;i class&#x3D;&quot;fa fa-pencil fa-fw &quot;&gt;&lt;&#x2F;i&gt;&amp;nbsp; Applications&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<p>更多图标，请访问<a href="http://fontawesome.dashgame.com/#basic" target="_blank" rel="noopener">Font Awesome</a>,并且参考<a href="http://www.cnblogs.com/wangfupeng1988/p/4129500.html" target="_blank" rel="noopener">“请用fontAwesome代替网页icon小图标”</a></p>
+<h3 id="测试emoji表情"><a href="#测试emoji表情" class="headerlink" title="测试emoji表情"></a>测试emoji表情</h3><p>目前尚没有配置好。可以参考<a href="http://very9s.net/post/hexo-support-emoji/" target="_blank" rel="noopener">“Hexo添加emoji”</a></p>
+<p>示例代码:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">here&#39;s some code! :bowtie:</span><br></pre></td></tr></table></figure>
+<p>更多表情，请访问<a href="https://www.webpagefx.com/tools/emoji-cheat-sheet/" target="_blank" rel="noopener">emoji表情官网</a>。</p>
+<h3 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h3><div class="note default"><p>hello default </p>
+</div>
+<div class="note primary"><p>hello primary  </p>
+</div>
+<div class="note success"><p>hello success  </p>
+</div>
+<div class="note info"><p>hello info  </p>
+</div>
+<div class="note warning"><p>hello warning </p>
+</div>
+<div class="note danger"><p>hello danger </p>
+</div>
+<p>代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% note default %&#125; hello default &#123;% endnote %&#125;</span><br><span class="line">&#123;% note primary %&#125; hello primary  &#123;% endnote %&#125;</span><br><span class="line">&#123;% note success %&#125; hello success  &#123;% endnote %&#125;</span><br><span class="line">&#123;% note info %&#125; hello info  &#123;% endnote %&#125;</span><br><span class="line">&#123;% note warning %&#125; hello warning &#123;% endnote %&#125;</span><br><span class="line">&#123;% note danger %&#125; hello danger &#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h3><p>找不到git部署 ERROR Deployer not found: git</p>
+<p>解决办法:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>部署类型设置git</p>
+<p>hexo 3.0 部署类型不再是github,而是git,修改主题配置文件_config.yml中deploy中的type为git</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 deploy:</span><br><span class="line">2   type: git</span><br><span class="line">3   repository: git@github.com:xiamenwcy&#x2F;xiamenwcy.github.io.git</span><br><span class="line">4   branch: master</span><br></pre></td></tr></table></figure>
+
+<h2 id="GitHub-Pages-绑定二级域名"><a href="#GitHub-Pages-绑定二级域名" class="headerlink" title="GitHub Pages 绑定二级域名"></a>GitHub Pages 绑定二级域名</h2><p>请参考：</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000005775893" target="_blank" rel="noopener">GitHub Pages 绑定二级域名</a></li>
+<li><a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="noopener">Hexo在github上构建免费的Web应用</a></li>
+<li><a href="https://help.github.com/articles/setting-up-a-custom-subdomain/" target="_blank" rel="noopener">Setting up a custom subdomain</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo静态博客使用不蒜子添加计数功能</title>
+    <url>/2015/06/26/busuanzi/</url>
+    <content><![CDATA[<p>静态网站建站现在有很多快速的技术和平台，但静态是优点也有缺点，由于是静态的，一些动态的内容如评论、计数等等模块就需要借助外来平台，评论有“多说”，计数有“<a href="http://service.ibruce.info/" target="_blank" rel="noopener">不蒜子官网</a>”！</p>
+<a id="more"></a>
+
+<p>使用方法很简单，只需要简单的两行代码，搞定计数。<br> 基本模式是：一行脚本+一行标签<br>一、安装脚本（必选）<br>打开themes/你的主题/layout/_partial/footer.pejs添加如下脚本即可，当然你也可以添加到 header 中。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script async src&#x3D;&quot;https:&#x2F;&#x2F;dn-lbstatics.qbox.me&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>二、安装标签（可选）<br>1、显示站点总访问量<br>要显示站点总访问量，复制以下代码添加到你需要显示的位置。可以打开themes/你的主题/layout/_partial/footer.ejs添加即可。<br>有两种算法可选：</p>
+<p>算法a：pv的方式，单个用户连续点击n篇文章，记录n次访问量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_pv&quot;&gt;</span><br><span class="line">    本站总访问量&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<p>算法b：uv的方式，单个用户连续点击n篇文章，只记录1次访客数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站访客数&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;人次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<p>2、显示单页面访问量<br>要显示每篇文章的访问量，复制以下代码添加到你需要显示的位置。</p>
+<p>算法：pv的方式，单个用户点击1篇文章，本篇文章记录1次阅读量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;busuanzi_container_page_pv&quot;&gt;</span><br><span class="line">  本文总阅读量&lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br><span class="line">&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+<p>3、显示站点总访问量和单页面访问量</p>
+<p>上面两种标签代码都安装。</p>
+<p>4、只计数不显示</p>
+<p>只安装脚本代码，不安装标签代码。</p>
+<p>综上，你也可以使用极简模式：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">本站总访问量&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br><span class="line">本站访客数&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;人次</span><br><span class="line">本文总阅读量&lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br></pre></td></tr></table></figure>
+<p>或者个性化一下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Total &lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt; views.</span><br><span class="line">您是xxx的第&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;个小伙伴</span><br><span class="line">&lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt; Hits</span><br></pre></td></tr></table></figure>
+<p>具体可以参考《<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">不蒜子</a>》<br>我的hexo博客是基于Jacman主题，我想实现如下效果：<br><img src="https://dn-xiamenwcy.qbox.me/busuanzi/she.jpg" style="display:block;margin:auto"/><br>最后我在themes/jacman/layout/_partial/footer.ejs中添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script async src&#x3D;&quot;https:&#x2F;&#x2F;dn-lbstatics.qbox.me&#x2F;busuanzi&#x2F;2.3&#x2F;busuanzi.pure.mini.js&quot;&gt;</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line"> &lt;&#x2F;br&gt;本站总访问量&lt;span id&#x3D;&quot;busuanzi_value_site_pv&quot;&gt;&lt;&#x2F;span&gt;次，本站访客数&lt;span id&#x3D;&quot;busuanzi_value_site_uv&quot;&gt;&lt;&#x2F;span&gt;人次，本文总阅读量&lt;span id&#x3D;&quot;busuanzi_value_page_pv&quot;&gt;&lt;&#x2F;span&gt;次</span><br></pre></td></tr></table></figure>
+<p>添加位置如下图：<br><img src="https://dn-xiamenwcy.qbox.me/busuanzi/add.jpg" alt=""><br>注意：</p>
+<p> 这里的<code>&lt;/br&gt;</code>是<a href="http://www.hsyx.net/909.html" target="_blank" rel="noopener">换行</a>的意思，因为我们需要在<br> <code>Powered by hexo and Theme by Jacman © 2015 Caiyong Wang</code><br> 之后显示访问语句，所以需要换行，不添加<code>&lt;/br&gt;</code>的话，将显示为一行。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>将Github提供的二级域名与自己的域名绑定</title>
+    <url>/2015/06/25/custom-your-domain/</url>
+    <content><![CDATA[<p>Github page允许将自己的域名与它提供的二级域名绑定，这样，我们可以在访问自己的域名时直接跳转到我们的Github博客主页。下面我们将阐述具体的方法。（以下按照先后顺序进行）</p>
+<a id="more"></a>
+
+<h2 id="GitHub-Pages的设置"><a href="#GitHub-Pages的设置" class="headerlink" title="GitHub Pages的设置"></a>GitHub Pages的设置</h2><p>方法一：在Repository的根目录下面，新建一个名为CNAME的文本文件，里面写入你要绑定的域名，比如wangcaiyong.com。</p>
+<p>方法二：到我的<a href="https://github.com/xiamenwcy/xiamenwcy.github.io" target="_blank" rel="noopener">github仓库</a>，点击右下角的「Download ZIP」，下载源文件，解压，找到CNAME文件，用记事本打开，将wangcaiyong.com修改成你的域名，放进Hexo\source目录下，用hexo命令提交上去。</p>
+<pre><code>$ hexo d -g</code></pre><p>部署后，点击xiamenwcy.github.io项目Settings选项，然后进入如下页面：<br><img src="https://dn-xiamenwcy.qbox.me/dns/gitpage1.jpg" alt=""></p>
+<p><img src="https://dn-xiamenwcy.qbox.me/dns/gitpage2.jpg" alt=""><br>可以看出github page已经绑定到自己的域名上了。</p>
+<h2 id="Godaddy注册商域名修改DNS地址"><a href="#Godaddy注册商域名修改DNS地址" class="headerlink" title="Godaddy注册商域名修改DNS地址"></a>Godaddy注册商域名修改DNS地址</h2><p>参考文章《<a href="https://support.dnspod.cn/Kb/showarticle/tsid/42/" target="_blank" rel="noopener">Godaddy注册商域名修改DNS地址</a>》设置dnspod来解析域名。文章可能和实际的操作有些区别，原因是GoDaddy改版了，但大致上是一样的。</p>
+<h2 id="DNS设置"><a href="#DNS设置" class="headerlink" title="DNS设置"></a>DNS设置</h2><p>用DNSpod，快，免费，稳定。<br>注册<a href="https://www.dnspod.cn/" target="_blank" rel="noopener">DNSpod</a>，添加域名，如下图设置。<br><img src="https://dn-xiamenwcy.qbox.me/dns/dns1.jpg" alt=""><br>其中A的两条记录指向的ip地址是github Pages的提供的ip</p>
+<ul>
+<li>192.30.252.153</li>
+<li>192.30.252.154</li>
+</ul>
+<p>如博客不能登录，有可能是github更改了空间服务的ip地址，记得及时到在<a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank" rel="noopener">GitHub Pages</a>查看最新的ip即可.<br>www指定的记录是你在github注册的仓库。<br><strong>注意</strong>：<br>修改 DNS 服务器需要 0-72 小时的全球生效时间，如果发现某些地方记录没有生效，并且修改 DNS 的时间还不到 72 小时，请耐心等待。我是等了一晚上才发现弄好的。</p>
+<p> 我们可以如何确定添加是否生效方法1、登陆你的DNSPod账户后，观察解析的域名，红色是还未生效，蓝色是已生效。方法2、进入命令提示窗口ping一下域名，看看是否解析到指定IP，是则生效。<br><img src="https://dn-xiamenwcy.qbox.me/dns/ping.jpg" alt=""></p>
+<p>有时候，我们的主域名正在使用着，需要先新建一个博客绑定到子域名，比如: blog.wangcaiyong.com,可以参考《<a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="noopener">Hexo在github上构建免费的Web应用</a>》<br>来设置，最后我们就可以使用自有域名访问github博客了。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的求职之路</title>
+    <url>/2015/11/02/campus-offer/</url>
+    <content><![CDATA[<blockquote class="blockquote-center"><p>不经一番寒彻骨, 怎得梅花扑鼻香 </p>
+</blockquote>
+
+<hr>
+<p><img src="https://dn-xiamenwcy.qbox.me/campus%20recruitment/meihua.jpg" alt=""><br>&#160; &#160; &#160; &#160;一直都想好好总结一下自己的求职之路，一方面系统总结一下自己这几个月的辛酸历程，一方面也以后的学弟学妹们留下一点宝贵的财富。截至今天，我已收到两份offer,一份是厦门美图网科技有限公司的图像算法工程师，另一份是华为深圳研究所的软件工程师。两份offer来之不易，种种心酸，历历在目。</p>
+<a id="more"></a>
+
+<p>&#160; &#160; &#160; &#160;如果从今年3月份开学算起，到今天校招，整整8个月。从最初的找暑期实习生，到后来的校招投了无数单位，在网站上填写简历到吐，真是心力交瘁。不得不感叹，找工作也是个体力活！<br>&#160; &#160; &#160; &#160;先来看看我的实投递记录吧。<br> <img src="https://dn-xiamenwcy.qbox.me/campus%20recruitment/intern.jpg" alt="暑期实习生投递表"><br>想想真是惨不忍睹，投了竟然30多家单位，而且很多简历都没通过，我现在还记得就在6月初的时候，我仍然一家单位都没找到的时候，那时我还在想还有华为这颗救命稻草，结果华为一面就被刷了。不禁让我想起妹妹的话，“千万不要把心思放在一个篮子里”,果然是啊，不过值得庆幸的是，我顺利通过了美图的笔试，后来又进入了面试，面试问了我一些笔试卷子上的题目，幸好我考完有去查了一下错误的题，所以在此也提醒大家，考过的试卷，务必要把自己不会的及时查询，最好写下来，这样一方面巩固了自己的知识，另一方面万一你收到面试通知，考官问你的时候，你也可以准确回答出来。面试美图的时候，除了问了我卷子上的题外，也问了自己做过的项目，由于他们公司比较喜欢做算法的，图像处理也比较偏数学，而我的项目也主要是一个数学理论的计算机实现，所以我侧重于将项目的数学理论讲清楚，至于计算机的东西涉及比较少，只说了一些C++的知识，<br>结果面试中有一个面试官直接就看上我了，要挖我，我当时真是受宠若惊了，后来他直接让我进入了hr面，这一面基本上不会刷人了。果然我顺利收到了美图暑期实习生的Offer。<br><img src="https://dn-xiamenwcy.qbox.me/campus%20recruitment/environment_10.jpg" alt="美图工作环境1"><br><img src="https://dn-xiamenwcy.qbox.me/campus%20recruitment/environment_16.jpg" alt="美图工作环境2"><br>&#160; &#160; &#160; &#160;面完美图，我基本上放心了，虽然当时并没有直接给我Offer，但当时那个面试官都要挖我了，所以我基本上放心了。后来喜事连连，我都不记得自己什么时候在大街网上投了个实习简历，当时看是厦门的，但是是外企，所以就抱着试试的心态投了，结果就在我面完美图的时候，那家公司（新思科技）给我打电话了，让我去面试，我后来去了，面试官问了我一些C++的东西，还问了项目，和一个开放问题，我尽自己可能答了，后来我就走了。由于之前觉得美图肯定要我了，所以对这个外企也就没怎么在乎，结果就在我面试回到公寓的路上，新思hr就给我打电话了，说我面试表现不错，让我准备材料，可以去实习了。我还比较纠结去美图还是去他那里，所以就说让我想想，过几天答复她们。她也同意了。<br>&#160; &#160; &#160; &#160;后来我觉得去美图比较好，就拒了新思。接下来就是为期两个月的美图实习生活了。9月1日，美图实习完毕，老大找我谈话，说可以留下来。我就放心了，但是我也没有放弃校招的机会，我先后投了很多公司，我就将自己印象深的几个说一下吧。我先面了华为。华为是我一直向往的公司，对于我们这些数学系毕业的学生来说，华为是个很大又很专业的平台。而且华为给予了应届生很多的学习机会，有长达6个月的培训期可供你学习。所以自己从研二就盼望着进入华为工作。华为的校招流程一般是上机考试+性格测试，上机考试3个编程题，可用C语言或java作答，性格测试就是很简单的，考察你做事的风格，答题时注意前后一致就可以了，不用紧张。接下来就是面试，第一面技术面，第二面综合面试。技术面主要问项目，没有项目的问编程题。综合面试就是简单的聊聊，问些非技术性的问题。我的面试过程还算不错，但不够优秀，主要原因我觉得是没有清晰地表达自己的项目内容，导致逻辑有点乱。我们宿舍一哥们暑假没找到实习，潜心钻研了一暑假安卓，做了一个软件管家的APP，赢得了面试官的好感，当场就要加他微信，事后证明那个同学拿到了华为的Special Offer.我呢，则费了九牛二虎之力，才拿到了华为普通的10k Offer。<br>&#160; &#160; &#160; &#160;后来我又陆续参加了锐捷网络、网龙、深信服的笔试，先说锐捷网络吧，锐捷我报的是图像识别工程师，笔试过了，面试问了我一些项目的问题，不过我主要扯了一些美图的东西，答得不是很好，果然最后面试没过，后来他们给我调岗了，又让我电话面试，调的岗位是嵌入式软件工程师，显然我没有这方面的积累，所以就面的一片糟糕。至于网龙，我参加了笔试，但没收到面试通知，被刷了。深信服还不错，笔试答得很有信心，然后参加了面试。一面问了一些基本的C++知识，还让现场写了快速排序法的程序，这个我很熟了，所以答得不错，后来果然收到了二面的通知，二面问了项目，不过他对我的项目不感兴趣，就给了我一道开放性问题，我试着回答了，不过不是很满意，面完后那个面试官问我你有什么问题，我当时觉得自己过不了，也就无所谓了，就问他像我们这种数学专业出身的人想从事IT行业，怎么更好地提高？他可能也意识到了我说这话的想法，所以就安慰我说我面试也并非过不了，他们要开会讨论才能决定。然后和我说要想获得提高，最好的方法是找开源项目去研究，看看人家是怎么做的，最好可以自己修改修改。后面好几天都没有消息，就在我基本上放弃的时候，某一天晚上hr给我打过电话来，说让我参加HR面，我想不出理由来为什么我竟然过了。HR面我准备的很充分，面试那天我答得很好，后来果然过了。不过深信服并没有给我Offer，那个HR跟我说，我面试过了，但他们今年在厦大招的超标了，所以我暂时签不了了，我只能表示遗憾了！其实要是他签我，我也就去了。算了，没缘分就不强求了。<br>&#160; &#160; &#160; &#160;后来我还收到一家杭州互联网公司的面试通知，叫In，做图片社交的，模仿国外Instagram,两轮都是电话面试，第一面问了一些C++方面的东西，比如内存泄漏的检测等等，还有项目，linux,python,机器学习等，我答得还算可以，后面第二面重点谈了两个项目，里面的细节问的很清楚，我答得都不错，不过我已经签了华为了，所以他可能就不再找我了。这次电话面试，他显然认真看了我的<a href="https://github.com/xiamenwcy/impSDM/tree/dev1" target="_blank" rel="noopener">Github</a>  主页，所以问得就很有针对性。<br>&#160; &#160; &#160; &#160;我的校招经历到这里就已经结束了，总结起来，有这么几点我觉得很重要：</p>
+<div class="note info"><ol>
+<li>明确目标，一定要很早确立自己的求职目标，像我开始就要找C++方面的工作，于是就在这上面做了很多准备，我找过实习，开了自己的Github帐号，有[自己的网站][6]，有自己的[csdn帐号][7]，我写了很多的文章，在C++方面储备了一些知识，而这些都为我的校招之路打下了很好的基础。</li>
+<li>坚持，一定要坚持，其实公司不要你，并不是你不优秀，而是可能你和他们公司的要求不符，所以要再继续努力，在不断的面试中，总结经验，你就一定会找到工作的。</li>
+<li>面试要讲究技巧，多去引导面试官，而不要被他牵着走。可以多看看面试方面的书，做做练习题，这里推荐一些书和网站：<br>《剑指Offer》,《面试宝典》，《C++面试宝典》，《程序员求职之道》，牛客网等，网上资料很多，自己多找找。</li>
+</ol>
+</div>
+<p>&#160; &#160; &#160; &#160;好了，就这样吧，祝大家早日找到工作！</p>
+<p><img src="https://dn-xiamenwcy.qbox.me/campus%20recruitment/offer.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>多说自定义CSS动感头像和多说评论显示User Agent</title>
+    <url>/2015/06/27/duoshuocss/</url>
+    <content><![CDATA[<p>本文不对以上话题做具体的阐述，因为文章《<a href="http://wsgzao.github.io/post/duoshuo/" target="_blank" rel="noopener">多说自定义CSS动感头像和多说评论显示User Agent的那些小事</a>》讲的够详细了，我就是按着上面的步骤逐步添加的，感谢博主的详细讲解。</p>
+<a id="more"></a>
+<p>下面我就自己在安装使用时遇到的一些问题和注意事项做一些阐述。</p>
+<p>由于我的博客是基于Hexo，主题是<a href="https://github.com/wuchong/jacman" target="_blank" rel="noopener">Jacman</a>,所以以下说明仅适于以上主题。</p>
+<h2 id="本地修改embed-js"><a href="#本地修改embed-js" class="headerlink" title="本地修改embed.js"></a>本地修改embed.js</h2><p> 注意修改e.user_id多说ID，可以自定义ssk前端显示昵称,即如下的ROOT你可以改成自己的。<br>以下是<a href="http://wsgzao.github.io/post/duoshuo/" target="_blank" rel="noopener">原文章</a>的：<br><img src="https://dn-xiamenwcy.qbox.me/duoshuo/css2.jpg" style="display:block;margin:auto"/><br>以下是我修改的：<br><img src="https://dn-xiamenwcy.qbox.me/duoshuo/css1.jpg" style="display:block;margin:auto"/></p>
+<h2 id="修改多说调用地址"><a href="#修改多说调用地址" class="headerlink" title="修改多说调用地址"></a>修改多说调用地址</h2><p>在\themes\jacman\layout_partial\after_footer.ejs中修改多说调用的地址,方法见<a href="http://wsgzao.github.io/post/duoshuo/" target="_blank" rel="noopener">原文章</a>。</p>
+<h2 id="增加Font-Awesome"><a href="#增加Font-Awesome" class="headerlink" title="增加Font Awesome"></a>增加Font Awesome</h2><p>两种方法：<br>方法一、官方下载压缩包 - <a href="http://fontawesome.io/" target="_blank" rel="noopener">http://fontawesome.io/</a><br>解压其中的fonts和css，根据你的Blog类型上传至指定目录引入CSS链接即可生效。我是点击 -<a href="https://github.com/FortAwesome/Font-Awesome下载的，然后将解压的后的fonts里的文件添加到\themes\jacman\source\font，相同文件覆盖即可。将css中的文件直接添加到\themes\jacman\source\css中。" target="_blank" rel="noopener">https://github.com/FortAwesome/Font-Awesome下载的，然后将解压的后的fonts里的文件添加到\themes\jacman\source\font，相同文件覆盖即可。将css中的文件直接添加到\themes\jacman\source\css中。</a><br>方法二、直接将如下代码加在 \themes\jacman\layout_partial\head.ejs 里面的最后一行，<code>&lt;/head&gt;</code>之前即可.</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;link rel&#x3D;&quot;stylesheet&quot; href&#x3D;&quot;&#x2F;&#x2F;maxcdn.bootstrapcdn.com&#x2F;font-awesome&#x2F;4.3.0&#x2F;css&#x2F;font-awesome.min.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="多说后台自定义CSS"><a href="#多说后台自定义CSS" class="headerlink" title="多说后台自定义CSS"></a>多说后台自定义CSS</h2><p><a href="http://wsgzao.github.io/post/duoshuo/" target="_blank" rel="noopener">原文章</a>有两个添加css的地方，其实这两个分别对应着多说自定义CSS动感头像和多说评论显示User Agent.<br>可以直接将两段代码一起添加到多说后台的自定义CSS中，即如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*Head Start*&#x2F;</span><br><span class="line">#ds-thread #ds-reset ul.ds-comments-tabs li.ds-tab a.ds-current &#123;</span><br><span class="line">    border: 0px;</span><br><span class="line">    color: #6D6D6B;</span><br><span class="line">    text-shadow: none;</span><br><span class="line">    background: #F3F3F3;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-highlight &#123;</span><br><span class="line">    font-family: Microsoft YaHei, &quot;Helvetica Neue&quot;, Helvetica, Arial, Sans-serif;</span><br><span class="line">    ;font-size: 100%;</span><br><span class="line">    color: #6D6D6B !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset ul.ds-comments-tabs li.ds-tab a.ds-current:hover &#123;</span><br><span class="line">    color: #696a52;</span><br><span class="line">    background: #F2F2F2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset a.ds-highlight:hover &#123;</span><br><span class="line">    color: #696a52 !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread &#123;</span><br><span class="line">    padding-left: 30px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset li.ds-post,#ds-thread #ds-reset #ds-hot-posts &#123;</span><br><span class="line">    overflow: visible;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-post-self &#123;</span><br><span class="line">    padding: 10px 0 10px 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset li.ds-post,#ds-thread #ds-reset .ds-post-self &#123;</span><br><span class="line">    border: 0 !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-avatar, #ds-thread #ds-reset ul.ds-children .ds-avatar &#123;</span><br><span class="line">    top: 15px;</span><br><span class="line">    left: -20px;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    width: 36px;</span><br><span class="line">    height: 36px;</span><br><span class="line">    box-shadow: -1px 0 1px rgba(0,0,0,.15) inset;</span><br><span class="line">    border-radius: 46px;</span><br><span class="line">    background: #FAFAFA;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread .ds-avatar a &#123;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    padding: 1px;</span><br><span class="line">    width: 32px;</span><br><span class="line">    height: 32px;</span><br><span class="line">    border: 1px solid #b9baa6;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    background-color: #fff !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread .ds-avatar a:hover &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread .ds-avatar &gt; img &#123;</span><br><span class="line">    margin: 2px 0 0 2px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-replybox &#123;</span><br><span class="line">    box-shadow: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset ul.ds-children .ds-replybox.ds-inline-replybox a.ds-avatar,</span><br><span class="line">#ds-reset .ds-replybox.ds-inline-replybox a.ds-avatar &#123;</span><br><span class="line">    left: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">    width: 32px !important;</span><br><span class="line">    height: 32px !important;</span><br><span class="line">    background: none;</span><br><span class="line">    box-shadow: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-replybox.ds-inline-replybox a.ds-avatar img &#123;</span><br><span class="line">    width: 32px !important;</span><br><span class="line">    height: 32px !important;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-replybox a.ds-avatar,</span><br><span class="line">#ds-reset .ds-replybox .ds-avatar img &#123;</span><br><span class="line">    padding: 0;</span><br><span class="line">    width: 50px !important;</span><br><span class="line">    height: 50px !important;</span><br><span class="line">    border-radius: 5px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset .ds-avatar img &#123;</span><br><span class="line">    width: 32px !important;</span><br><span class="line">    height: 32px !important;</span><br><span class="line">    border-radius: 32px;</span><br><span class="line">    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.22);</span><br><span class="line">    -webkit-transition: .8s all ease-in-out;</span><br><span class="line">    -moz-transition: .4s all ease-in-out;</span><br><span class="line">    -o-transition: .4s all ease-in-out;</span><br><span class="line">    -ms-transition: .4s all ease-in-out;</span><br><span class="line">    transition: .4s all ease-in-out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ds-post-self:hover .ds-avatar img &#123;</span><br><span class="line">    -webkit-transform: rotateX(360deg);</span><br><span class="line">    -moz-transform: rotate(360deg);</span><br><span class="line">    -o-transform: rotate(360deg);</span><br><span class="line">    -ms-transform: rotate(360deg);</span><br><span class="line">    transform: rotate(360deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-comment-body &#123;</span><br><span class="line">    -webkit-transition-delay: initial;</span><br><span class="line">    -webkit-transition-duration: 0.4s;</span><br><span class="line">    -webkit-transition-property: all;</span><br><span class="line">    -webkit-transition-timing-function: initial;</span><br><span class="line">    background: #F7F7F7;</span><br><span class="line">    padding: 15px 15px 15px 47px;</span><br><span class="line">    border-radius: 5px;</span><br><span class="line">    box-shadow: #B8B9B9 0 1px 3px;</span><br><span class="line">    border: white 1px solid;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset ul.ds-children .ds-comment-body &#123;</span><br><span class="line">    padding-left: 15px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-comment-body p &#123;</span><br><span class="line">    color: #787968;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-comments &#123;</span><br><span class="line">    border-bottom: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-powered-by &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-comments a.ds-user-name &#123;</span><br><span class="line">    font-weight: normal;</span><br><span class="line">    color: #3D3D3D !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-comments a.ds-user-name:hover &#123;</span><br><span class="line">    color: #D32 !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset #ds-bubble &#123;</span><br><span class="line">    display: none !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset #ds-hot-posts &#123;</span><br><span class="line">    border: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-reset #ds-hot-posts .ds-gradient-bg &#123;</span><br><span class="line">    background: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#ds-thread #ds-reset .ds-comment-body:hover &#123;</span><br><span class="line">    background-color: #F1F1F1;</span><br><span class="line">    -webkit-transition-delay: initial;</span><br><span class="line">    -webkit-transition-duration: 0.4s;</span><br><span class="line">    -webkit-transition-property: all;</span><br><span class="line">    -webkit-transition-timing-function: initial;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*Head End*&#x2F;</span><br><span class="line">&#x2F;*UA Start*&#x2F;</span><br><span class="line">span.ua &#123;</span><br><span class="line">    margin: 0 1px!important;</span><br><span class="line">    color: #FFFFFF!important;</span><br><span class="line">    &#x2F;*text-transform: Capitalize!important;</span><br><span class="line">    float: right!important;</span><br><span class="line">    line-height: 18px!important;*&#x2F;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_other.os_other &#123;</span><br><span class="line">    background-color: #ccc!important;</span><br><span class="line">    color: #fff;</span><br><span class="line">    border: 1px solid #BBB!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_ie &#123;</span><br><span class="line">    background-color: #428bca!important;</span><br><span class="line">    border-color: #357ebd!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_firefox &#123;</span><br><span class="line">    background-color: #f0ad4e!important;</span><br><span class="line">    border-color: #eea236!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_maxthon &#123;</span><br><span class="line">    background-color: #7373B9!important;</span><br><span class="line">    border-color: #7373B9!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_ucweb &#123;</span><br><span class="line">    background-color: #FF740F!important;</span><br><span class="line">    border-color: #d43f3a!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_sogou &#123;</span><br><span class="line">    background-color: #78ACE9!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_2345explorer &#123;</span><br><span class="line">    background-color: #2478B8!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_2345chrome &#123;</span><br><span class="line">    background-color: #F9D024!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_mi &#123;</span><br><span class="line">    background-color: #FF4A00!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_lbbrowser &#123;</span><br><span class="line">    background-color: #FC9D2E!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_chrome &#123;</span><br><span class="line">    background-color: #EE6252!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_qq &#123;</span><br><span class="line">    background-color: #3D88A8!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_apple &#123;</span><br><span class="line">    background-color: #E95620!important;</span><br><span class="line">    border-color: #4cae4c!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.ua_opera &#123;</span><br><span class="line">    background-color: #d9534f!important;</span><br><span class="line">    border-color: #d43f3a!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_vista,.os_2000,.os_windows,.os_xp,.os_7,.os_8,.os_8_1 &#123;</span><br><span class="line">    background-color: #39b3d7!important;</span><br><span class="line">    border-color: #46b8da!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_android &#123;</span><br><span class="line">    background-color: #98C13D!important;</span><br><span class="line">    border-color: #01B171!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_ubuntu &#123;</span><br><span class="line">    background-color: #DD4814!important;</span><br><span class="line">    border-color: #01B171!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_linux &#123;</span><br><span class="line">    background-color: #3A3A3A!important;</span><br><span class="line">    border-color: #1F1F1F!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_mac &#123;</span><br><span class="line">    background-color: #666666!important;</span><br><span class="line">    border-color: #1F1F1F!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_unix &#123;</span><br><span class="line">    background-color: #006600!important;</span><br><span class="line">    border-color: #1F1F1F!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.os_nokia &#123;</span><br><span class="line">    background-color: #014485!important;</span><br><span class="line">    border-color: #1F1F1F!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.sskadmin &#123;</span><br><span class="line">    background-color: #00a67c!important;</span><br><span class="line">    border-color: #01B171!important;</span><br><span class="line">    border-radius: 4px;</span><br><span class="line">    padding: 0 5px!important;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*UA End*&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3000fps&amp;SDM方法资源摘录</title>
+    <url>/2016/03/19/face-alignment/</url>
+    <content><![CDATA[<p>去年在美图公司实习的时候，研究了一段时间的SDM方法，写了一系列的博客，见《<a href="http://blog.csdn.net/xiamentingtao/article/details/47306887" target="_blank" rel="noopener">Supervised Descent Method and its Applications to Face Alignment</a>》等，今年来到了杭州，进入了图片社交领域的佼佼者in实习，主要还是做人脸对齐。最近一段时间，一直在研究《<a href="http://7xrqgw.com1.z0.glb.clouddn.com/3000fps.pdf" target="_blank" rel="noopener">Face Alignment at 3000 FPS via Regressing Local Binary Features</a>》这篇文章，也为此搜集了很多资料，特整理在此，以供参考。</p>
+<h2 id="paper"><a href="#paper" class="headerlink" title="paper:"></a>paper:</h2><p>   3000fps论文链接:</p>
+<ul>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/3000fps.pdf" target="_blank" rel="noopener">Face Alignment at 3000 FPS via Regressing Local Binary Features</a></p>
+<p>SDM论文链接:</p>
+</li>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/sdm.pdf" target="_blank" rel="noopener">Supervised Descent Method and its Applications to Face Alignment</a></p>
+</li>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/thesis-xiong-2015.pdf" target="_blank" rel="noopener">Supervised Descent Method </a></p>
+</li>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/Xiong_Global_Supervised_Descent_2015_CVPR_paper.pdf" target="_blank" rel="noopener">Global Supervised Descent Method</a></p>
+</li>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/Supervised%20Descent%20Method%20for%20Solving%20Nonlinear%20Least%20Squares%20Problems%20in%20Computer%20Vision.pdf" target="_blank" rel="noopener">Supervised Descent Method for Solving Nonlinear Least Squares Problems in Computer Vision</a></p>
+</li>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/sdm/sdm.pptx" target="_blank" rel="noopener">我总结的sdm方法ppt</a></p>
+</li>
+<li><p><a href="http://7xrqgw.com1.z0.glb.clouddn.com/sdm/%E6%8A%A5%E5%91%8A.pdf" target="_blank" rel="noopener">我总结的sdm方法文档</a></p>
+</li>
+</ul>
+<h2 id="github-code-linking"><a href="#github-code-linking" class="headerlink" title="github code linking:"></a>github code linking:</h2><p> <strong>3000fps:</strong></p>
+<ul>
+<li><a href="https://github.com/luoyetx/face-alignment-at-3000fps" target="_blank" rel="noopener">luoyetx/face-alignment-at-3000fps(C++)</a></li>
+<li><a href="https://github.com/freesouls/face-alignment-at-3000fps" target="_blank" rel="noopener">freesouls/face-alignment-at-3000fps(C++)</a></li>
+<li><a href="https://github.com/yulequan/face-alignment-in-3000fps" target="_blank" rel="noopener">yulequan/face-alignment-in-3000fps(C++)</a></li>
+<li><a href="https://github.com/jwyang/face-alignment" target="_blank" rel="noopener">jwyang/face-alignment(matlab)</a></li>
+<li><a href="https://github.com/jwyang/face-alignment-cpp" target="_blank" rel="noopener">jwyang/face alignment in 3000fps with C++</a></li>
+<li><a href="https://github.com/soundsilence/FaceAlignment" target="_blank" rel="noopener">soundsilence/FaceAlignment</a></li>
+</ul>
+<p><strong>SDM:</strong></p>
+<ul>
+<li><a href="https://github.com/patrikhuber/superviseddescent" target="_blank" rel="noopener">patrikhuber/superviseddescent(C++11)</a></li>
+<li><a href="http://patrikhuber.github.io/superviseddescent/" target="_blank" rel="noopener">patrikhuber/superviseddescent说明</a></li>
+<li><a href="http://humansensing.cs.cmu.edu/intraface/" target="_blank" rel="noopener">IntraFace(SDM官网)</a></li>
+<li><a href="http://xiong828.github.io/index.html" target="_blank" rel="noopener">SDM作者主页</a></li>
+<li><a href="https://rafaeltibaes.wordpress.com/tag/cc-code/" target="_blank" rel="noopener">IntraFace说明</a></li>
+<li><a href="https://github.com/tntrung/impSDM" target="_blank" rel="noopener">tntrung/impSDM(matlab)</a></li>
+<li><a href="http://7xrqgw.com1.z0.glb.clouddn.com/%E3%80%90C%2B%2B%E7%89%88%E3%80%91intraFacev1.2.rar" target="_blank" rel="noopener">IntraFace 官方给的代码，可直接运行</a></li>
+</ul>
+<h2 id="other-linking"><a href="#other-linking" class="headerlink" title="other linking"></a>other linking</h2><ul>
+<li><a href="https://sites.google.com/site/yanghengcv/face-alignment" target="_blank" rel="noopener">Face Alignment 最近几年paper收集</a></li>
+<li><a href="https://www.cl.cam.ac.uk/~hy306/FaceAlignment.html#An-Empirical-Study-of-Recent-Face-Alignment-Methods" target="_blank" rel="noopener">An Empirical Study of Recent Face Alignment Methods</a></li>
+<li><a href="https://sites.google.com/site/yanghengcv/home" target="_blank" rel="noopener">Heng Yang @ Cambridge</a></li>
+<li><a href="http://cmp.felk.cvut.cz/~uricamic/flandmark/" target="_blank" rel="noopener">flandmark : Open-source implementation of facial landmark detector</a></li>
+<li><a href="http://blog.csdn.net/xp215774576/article/details/46052323" target="_blank" rel="noopener">Supervised Descent Method Face Alignment 代码下载和算法研究</a></li>
+<li><a href="http://blog.csdn.net/wsj998689aa/article/details/45204599" target="_blank" rel="noopener">浅谈随机森林在人脸对齐上的应用~</a></li>
+<li><a href="http://blog.luoyetx.com/2015/08/face-alignment-at-3000fps/#" target="_blank" rel="noopener">Face Alignment at 3000 FPS via Regressing Local Binary Features(luoyetx’blog)</a></li>
+<li><a href="http://www.xlgps.com/article/63528.html" target="_blank" rel="noopener">Face alignment at 3000FPS via Regressing Local Binrary features 理解</a></li>
+<li><a href="http://freesouls.github.io/2015/06/07/face-alignment-local-binary-feature/" target="_blank" rel="noopener">C++实现和解读Face Alignment at 3000fps via Local Binary Feature</a></li>
+<li><a href="http://7xrqgw.com1.z0.glb.clouddn.com/sdmppt.pdf" target="_blank" rel="noopener">SDM ppt</a></li>
+<li><a href="http://7xrqgw.com1.z0.glb.clouddn.com/LBF_slides.pdf" target="_blank" rel="noopener">3000fps ppt</a></li>
+<li><a href="http://blog.csdn.net/sunshine_in_moon/article/details/49838245/" target="_blank" rel="noopener">Face Alignment at 3000FPS（C++版）工程配置</a></li>
+<li><a href="http://blog.csdn.net/wangjian8006/article/details/42004717" target="_blank" rel="noopener">Face Alignment at 3000FPS(matlab)工程配置</a></li>
+</ul>
+<h2 id="开源库链接及评价"><a href="#开源库链接及评价" class="headerlink" title="开源库链接及评价"></a>开源库链接及评价</h2><ol>
+<li>dlib ：<a href="https://github.com/davisking/dlib/tree/v18.18" target="_blank" rel="noopener">https://github.com/davisking/dlib/tree/v18.18</a> </li>
+</ol>
+<p><strong>评价</strong>：速度快，可商用，有些时候不太准确<br>2. CLM-framework: <a href="https://github.com/TadasBaltrusaitis/CLM-framework，" target="_blank" rel="noopener">https://github.com/TadasBaltrusaitis/CLM-framework，</a><br>新版已经改为<strong>OpenFace</strong>，见：<a href="https://github.com/TadasBaltrusaitis/OpenFace" target="_blank" rel="noopener">https://github.com/TadasBaltrusaitis/OpenFace</a><br><strong>评价</strong>:很准确，不可商用<br>3. Face Detection, Pose Estimation and Landmark Localization in the Wild :<a href="http://www.ics.uci.edu/~xzhu/face/" target="_blank" rel="noopener">http://www.ics.uci.edu/~xzhu/face/</a><br><strong>评价</strong>:Very slow (~10 seconds an image after hyper threading on a 8-core CPU), but very accurate when it comes to high pose variations<br>4. SDM patrikhuber/superviseddescent:<a href="https://github.com/patrikhuber/superviseddescent" target="_blank" rel="noopener">https://github.com/patrikhuber/superviseddescent</a><br><strong>评价</strong>:Nicely written C++ code, though not very robust<br>5.  Robust face landmark estimation under occlusion：<a href="http://www.vision.caltech.edu/xpburgos/ICCV13/" target="_blank" rel="noopener">http://www.vision.caltech.edu/xpburgos/ICCV13/</a><br><strong>评价</strong>:Specially designed for handling occlusions(遮挡区域), but slow on account being written in MATLAB.<br>6. 应用了CLM的项目：<a href="https://www.technologyreview.com/s/541866/this-car-knows-your-next-misstep-before-you-make-it/" target="_blank" rel="noopener">https://www.technologyreview.com/s/541866/this-car-knows-your-next-misstep-before-you-make-it/</a><br><strong>评价</strong>:I actually explored a large number of open-source facial landmark detectors for a project, and found the CLM framework to outperform everything else (in terms of both speed and accuracy). We eventually used it in our project: <a href="http://www.technologyreview.com/news/" target="_blank" rel="noopener">www.technologyreview.com/news/</a>…<br>7. clandmark：<a href="https://github.com/uricamic/clandmark" target="_blank" rel="noopener">https://github.com/uricamic/clandmark</a><br>8. kylemcdonald/FaceTracker：<a href="https://github.com/kylemcdonald/FaceTracker" target="_blank" rel="noopener">https://github.com/kylemcdonald/FaceTracker</a><br>9. <i class="fa fa-download fa-fw"></i>&nbsp;<a href="https://github.com/ajdroid/facetrackerapp" target="_blank" rel="noopener">Android app for facial landmark tracking</a><br><strong>评价</strong>：安装该app需要OpenCV Manager，我已提供<a href="http://7xs15g.com1.z0.glb.clouddn.com/org.opencv.engine.3.00.apk" target="_blank" rel="noopener">链接</a>.。<br>至于效果，不是很好，需要优化。不过上面提供了编写jni的代码，对于编写C++的API应该会有帮助。<br>10. kylemcdonald/FaceTracker：<a href="https://github.com/kylemcdonald/FaceTracker" target="_blank" rel="noopener">https://github.com/kylemcdonald/FaceTracker</a><br>11. ofxFaceTracker:<a href="https://github.com/kylemcdonald/ofxFaceTracker" target="_blank" rel="noopener">https://github.com/kylemcdonald/ofxFaceTracker</a></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://www.learnopencv.com/facial-landmark-detection/#comment-2471797375" target="_blank" rel="noopener">Facial Landmark Detection</a></p>
+]]></content>
+      <categories>
+        <category>人脸识别</category>
+      </categories>
+      <tags>
+        <tag>人脸识别</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>停更通知</title>
+    <url>/2020/04/29/final/</url>
+    <content><![CDATA[<p>本博客即日起停止更新，最新技术文章，请参考<a href="https://blog.csdn.net/xiamentingtao" target="_blank" rel="noopener">CSDN博客</a>，更多科研进展，请参考<a href="http://academia.caiyong.wang/" target="_blank" rel="noopener">科研主页</a>.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>GoDaddy(2015版)域名购买全程指南</title>
+    <url>/2015/06/25/godaddy/</url>
+    <content><![CDATA[<p>Godaddy是全球第一大域名主机上，其域名地位在世界上是无人可比的，但是由于godaddy没有中文站点，所以很多用户不知道如何注册godaddy的域名。今天小编就向大家展示一下godaddy域名注册的全部教程。以下为本人在windows 7下亲测可用。</p>
+<a id="more"></a>
+
+<h2 id="第一步-注册账户"><a href="#第一步-注册账户" class="headerlink" title="第一步  注册账户"></a>第一步  注册账户</h2><p> 1.登录官方网站：<a href="https://www.godaddy.com/" target="_blank" rel="noopener">https://www.godaddy.com/</a><br><img src="https://dn-xiamenwcy.qbox.me/godaddy/first_page.jpg" alt=""><br>在左上角选择United States-English,如下图<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/country.jpg" alt=""><br>然后开始注册账户,点击右上角Sign In,就会出现<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/register0.jpg" alt=""><br>点击后面的”Create MY ACCOUNT”按钮注册新账户。</p>
+<p> 2.填写注册信息<br> <img src="https://dn-xiamenwcy.qbox.me/godaddy/register1.jpg" alt=""><br>新版本填写资料很简单，只需要填写邮箱、用户名、密码和四位数的PIN就可以注册，需要注意一个问题。密码需要比较复杂的，比如大小写字母数字混合等，要不我们也看不到CREATE ACCOUNT的按钮。点击CREATE ACCOUNT注册完毕。</p>
+<p> 3.完善资料<br> 在第二填写步简单的资料即可注册成功，但这时候我们购买产品是不行的，需要在后台的个人信息栏中完善注册信息，比如地区、地址以及电话，这样我们才可以购买产品。<br>注册账户后，点击右上角 My Account,然后登录，就可以看到Visit My Account，点击进入如下页面。<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/register2.jpg" alt=""></p>
+<p><img src="https://dn-xiamenwcy.qbox.me/godaddy/register3.jpg" alt=""></p>
+<p><img src="https://dn-xiamenwcy.qbox.me/godaddy/register4.jpg" alt=""><br>选择Settings,然后填写Account Owner Information和Account Security Settings即可。至此。账户注册完毕。</p>
+<h2 id="第二步-购买域名"><a href="#第二步-购买域名" class="headerlink" title="第二步   购买域名"></a>第二步   购买域名</h2><p>1.访问Godaddy首页，搜索你想要的域名.<br> 一般我们自己写博客的话，用.com比较好，比如我们搜素xinjiangdaxue.com,如下：<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy1.jpg" alt=""><br>出现YES! YOUR DOMAIN IS AVAILABLE. BUY IT BEFORE SOMEONE ELSE DOES.<br>表明可以购买，否则就是已经被占据。 </p>
+<p>2.点击Select,<br> <img src="https://dn-xiamenwcy.qbox.me/godaddy/buy2.jpg" alt=""><br> 点击Continue to cart. </p>
+<p>3.出现下面页面，直接点Continue to cart<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy3.jpg" alt=""></p>
+<p>4.出现价格页面<br> <img src="https://dn-xiamenwcy.qbox.me/godaddy/buy4.jpg" alt=""><br>这里我们可以选择购买的年限，我是第一次买了一年，以后再续费。当然你也可以一次购买多年。<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy4.jpg" alt=""><br>往下看，中间是一些广告，不要理睬。<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy5.jpg" alt=""></p>
+<p><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy6.jpg" alt=""><br>这里要注意有一个Have a Promo Code?选项，点击就会出现小窗口，<br>需要填写优惠码就可以获取相应的优惠。不过由于新版的Godaddy使用优惠码只能使用visa卡或者MasterCard等国外的卡，因此如果你没有，就不要点击这一项，直接点击Proceed to Checkout 。进入支付页面。</p>
+<p>5.支付宝支付<br>如下图<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy7.jpg" alt=""><br>点击支付宝，输入帐号和密码或者扫码支付。待支付成功后，等待几分钟，<strong>进入我们注册的邮箱里点击确认</strong>，（这一步很重要，否则第6步我们将看不到购买的域名记录）。</p>
+<p>6.查看域名记录<br><img src="https://dn-xiamenwcy.qbox.me/godaddy/buy8.jpg" alt=""><br>有三项：domain,email,photo album。至此我们的域名成功购买了。你就拥有了一个属于自己的域名，是不是很酷！赶紧行动吧！</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>GoDaddy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在in实习的日子里</title>
+    <url>/2016/05/14/in/</url>
+    <content><![CDATA[<p>我是个幸运的家伙，我一直在暗暗跟自己说，每一段人生的过往我都和一批快乐的小伙伴一起度过。临到毕业季，我还抓住了毕业的尾巴，来到杭州实习，在in这个温暖的大家庭一起和大家度过了最充实最美好的时光。</p>
+<p>我还清楚地记得我刚来实习的那几天。自去年收到in的offer，我就准备抽时间来实习，本来想要在1月1日来实习，可是由于毕业论文的因素一直拖到了2月22日，到了要走的那一天，我挑了一些和图像处理相关的书以及一些衣服就坐上了到杭州的无座火车，当时没买到票，就凑合着和人家挤着坐着混混沌沌地来到了杭州。</p>
+<p>来到杭州就联系了我的大学同学邹浩，我们叫“耗子”。耗子帮着我一起找了房子，找了一天的时间，累成狗了，主要我预计实习三个月，所以短租不好找，经过努力，最后还是看上了一家。房子的问题终于解决了，那么我的实习生活也正式拉开帷幕了。</p>
+<a id="more"></a>
+<h2 id="in的第一天"><a href="#in的第一天" class="headerlink" title="in的第一天"></a>in的第一天</h2><p>周一，我背着书包，来到了位于黄龙时代广场A座的杭州九言科技公司，也就是大名鼎鼎的in公司。我上了18楼，那天人事美眉<strong>果冻</strong>接待的我，和我一起入职的那天还有一个叫“加一”的小姑娘。见到漂亮小姑娘，就想搭讪一下，我问“你是做什么的呀”，她说“品牌策划”什么的，然后立马回我一句，说知道我是做什么的，她说“你是做技术的吧”，我有点震惊，后来也想开了，看来我长了一张技术脸吧，不过我的确喜欢做技术。</p>
+<p>办完手续，就准备见leader了。我之前加了leader的微信，看见他朋友圈有一张在国外照的照片，当时还留着胡子，那时我还在想他是不是一个很严肃、不好打交道的人呢？我怀着忐忑的心跟着果冻去见了他。后来证明我想错了，leader是我实习以来见过的最好的领导了，为人宽厚，真诚，值得信赖，在他面前可以放心大胆地讲述自己的观点，我真的很庆幸自己在这样的领导底下干活。</p>
+<p>leader第一次见我，问我花名叫什么？我说叫<strong>北雁</strong>。“北雁”是我自己想的，其实我还觉得蛮文艺的。当时我考虑到自己是北方来的，又在南方工作，就好似大雁由北而归，我又喜欢比较苍茫的感觉，于是大雁，高空，豪迈等等，一起成就了这个词“北雁”，从此我在in一直被大家叫成北雁。以后我也会经常使用这个名字的。很好地符合了我的性格等等。</p>
+<p>后来leader给我安排工作，鉴于我之前在美图公司做过<strong>SDM方法</strong>，结合公司现在的需求，他让我继续研究另一种人脸特征点检测的方法-<strong>LBF方法</strong>，其实也是SDM方法的扩展。于是研究人脸特征点检测就成了我的全部工作内容了。</p>
+<h2 id="in的感受"><a href="#in的感受" class="headerlink" title="in的感受"></a>in的感受</h2><p>刚来in的时候，说实话我都不知道它是干什么的，后来通过百度知道了in是国内做图片社交最好的公司之一，主要对标国外被facebook收购的instagram.在in工作的日子里，我们平常接触的都是一些80,90甚至00后的小伙伴们，因为目前in虽然有200多人，过了B轮融资，估值20亿人民币，上了新三板，但依然是创业公司的氛围。大家还是保持着高昂的热情，每天努力地工资。in的CEO，大家都叫她清水姐姐，第一次收超过30元的红包，就是清水姐姐发的，我虽然没有和姐姐近距离沟通过，但是经常看见她和员工讨论工作。有一次周末的时候，我在公司加班，正巧那天姐姐也来了，她还问我就你一个人吗？顺手给了我一个水果，第一次近距离接触那么美的CEO姐姐，真是有点受宠若惊啊，激动地说，“我不要，你吃吧，姐姐”。当时真是有点蒙了，事后想想也蛮有意思。</p>
+<p>在in实习，我主要做人脸特征点对齐，这个工作说起来，很容易讲清楚，就是给定一张脸的照片，你告诉我脸的眼睛、鼻子等坐标位置在哪里？<br>即如下图：</p>
+<center>
+![][1]
+</center>
+
+<p>这个工作很多人做过，我们只要基于lbf这个方法去做。我刚接手的时候，啥都不会，就开始从论文慢慢去读。花了三天左右的时间，查了网上的一些博客，总算把论文的大概意思弄懂了，但是像<strong>“随机树”，“局部二值特征”</strong>，<strong>“交叉验证”</strong>等几个概念还是没弄明白。因为之前学的是数学，对机器学习的一些东西也没搞过，所以有点糊涂。没搞过，不明白，想问领导又不好意思。不过幸好大概框架看懂了，于是我就开始逐个攻破上面几个概念，谷歌、百度都用上了，主要依赖的还是一些书籍，我之前买过李航的一本书，叫<strong><em>《统计学习方法》</em></strong>，那本书清楚地解释了随机森林，随机树的一些概念，后来通过博客以及一些网友的指导看懂了剩下的一些部分。</p>
+<blockquote>
+<p><strong>不得不说的是</strong>，其实我觉得凡是做技术的都应该养成写博客的习惯，你可以把自己的一些日常心得写下来，积累在网上，这样的话，网友可以看见你写的东西。如果你们刚好做的相同，他就会联系你，这样他的一些资源就为你所用，你也可以帮他解决一些问题，互惠互利；而且平常遇到的问题，时间久了，如果当时解决了，没有及时记下来，后面又出现了，你还要再折腾一遍，岂不耽误工夫？这里我推荐使用<a href="http://www.csdn.net/" target="_blank" rel="noopener"><strong>CSDN</strong></a>，或者<a href="http://www.cnblogs.com/" target="_blank" rel="noopener"><strong>博客园</strong></a>，来记录你的技术。你也可以使用<a href="http://www.qiniu.com/" target="_blank" rel="noopener"><strong>七牛云存储</strong></a>去存你的一些资料，不过七牛是收费的，不过不会太贵，预存15元，一顿饭的钱。现在是付费时代了，免费的东西不好用，我们的消费观也应该和国际接轨了。</p>
+</blockquote>
+<p>后来我就开始看Github上的开源实现，我大概找到了5,6个不同版本的源码，每个版本实际打开一下，有一些是相同的，证明他们互相借鉴过，也很正常的，我把每个版本的源码仔仔细细地看了一遍，每一次看别人的源码其实是一种享受的过程，就像是你去慢慢了解一个人的过程，我可以看到他的代码风格，一如他的性格，我也学习了很多新的编程技巧，例如boost 的filesystem等，我也加了这些开源实现的作者qq，有的我还把自己的一些问题通过邮件或者qq发送给他，大家都很热心，都回复了我，还给出了相应的建议。我真的很感谢他们。</p>
+<p>在看了很多源码以后，自己对论文的理解也更深了，我就开始构建自己的版本。我吸取了许多的精华，又加入了自己的理解与扩展，同时使用了C++11，boost等以前没有大规模使用的C++新特性来构建整个代码。尤其值得一说的是C++11的“<strong>for range,lambda 表达式，auto,using,share_ptr</strong>”等我基本都用上了，那时我每天早上上班，都要先看一小时的C++11的书，才开始工作，看完后我就立马加在代码中，事实证明非常有效，极大地提高了生产力。</p>
+<p>中间构建代码是一件很艰难的事，虽然我清楚应该做些什么，但是由于我的经验不足，依然困难重重。当时的情况是我甚至都不会在一个VS solution里建立多个工程，以前一直是一个工程的。我就只能是模仿着来。后面我开始又<strong>学习了一些lib,dll的知识，学习了如何读取和保存一个ini配置文件，如何读写一个二进制文件，如何合理地设计类，如何使用boost解析命令行参数，如何使用dlib库等等</strong>.经过三个月的艰苦努力，我还是完成了整个代码的架构与编写。当然了我还要感谢我的伙伴方圆，他的到来给我很大帮助，我们一起完成了人脸特征点对齐PC版的初级版本。</p>
+<p>到现在为止，这个项目还没有做完，因为我们还要移植到移动端，另外我们的实验结果表明，对于正脸的支持比较好，对于侧脸不太好，这个都需要解决，而且模型偏大，达到18M左右，必须削减。不过，基本还不错，我们的代码非常稳定，实验效果也比网上的好很多。<br>先贴几张效果图看看吧。</p>
+<center>
+![][5] ![][6] 
+</center>
+<center>
+![][7] ![][8]
+</center>
+<center>
+![][9] ![][10]
+</center>
+
+<h2 id="in生活的精彩瞬间"><a href="#in生活的精彩瞬间" class="headerlink" title="in生活的精彩瞬间"></a>in生活的精彩瞬间</h2><ul>
+<li>这是我们18楼的前台，角度有点不好，其实很美的，里面有我们可爱的抹茶妹妹呢。<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/in%E5%A4%A7%E5%8E%85.jpg?imageView2/2/w/500/interlace/0/q/100" alt="前台"></li>
+<li>这是位于9楼的研发办公室，流水线的办公桌很有特色，9楼里面还有饮料，比外面的便宜很多啦，还有饮水机，台球桌等健身设备，非常不错哦！<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/in%E5%8A%9E%E5%85%AC%E7%8E%AF%E5%A2%83.jpg?imageView2/2/w/500/interlace/0/q/100" alt="研发办公室"></li>
+<li>这是我的leader在做报告，看见我的名字了吗？好有成就感哦~~。<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/leader.jpg?imageView2/2/w/500/interlace/0/q/100" alt=""></li>
+<li>清水姐姐的书，里面都是繁体，还没来得及拜读呢。据说都是心灵鸡汤,O(∩_∩)O哈哈~<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/%E4%B9%A6.jpg?imageView2/2/w/500/interlace/0/q/100" alt=""></li>
+<li>一天早上我在in里发现的，觉得这张照片特别美，就在朋友圈发了，还写了一些文字，我可是文艺青年呢，有木有~(<em>^__^</em>)。<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/%E5%A7%90%E5%A7%90.png?imageView2/2/w/500/interlace/0/q/100" alt=""></li>
+<li>姐姐给大家签名呢。<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/%E6%B8%85%E6%B0%B4.jpg?imageView2/2/w/500/interlace/0/q/100" alt=""></li>
+</ul>
+<p><img src="http://7xu23b.com1.z0.glb.clouddn.com/%E8%AF%B7%E8%B0%81.jpg?imageView2/2/w/500/interlace/0/q/100" alt=""></p>
+<ul>
+<li><p>最后一张是给我的，姐姐还写错字了，哈哈。谢谢姐姐了。<br><img src="http://7xu23b.com1.z0.glb.clouddn.com/%E8%B5%A0%E8%A8%80.jpg?imageView2/2/w/500/interlace/0/q/100" alt=""></p>
+<h2 id="in生活的意外之喜"><a href="#in生活的意外之喜" class="headerlink" title="in生活的意外之喜"></a>in生活的意外之喜</h2><p>当你耐心看完了上面的文字后，你也许会问我，为什么不在in继续干呢？其实leader找我谈了好几次话，希望我留下来。我也犹豫了好久，直到现在，其实我还没有完全放弃in.我选择中途暂时离开的原因是在in实习的日子里，我在一个很偶然的时刻，在我同事家的聚会上，碰到了我现在的另一半。</p>
+<p>我们俩应该是一见钟情吧，我觉得她是一个很开朗、很爱笑的女孩，我很喜欢她很温柔的那一面。第一面我就被她深深吸引，我觉得她就是我一直苦苦寻找的那一位。她也觉得我也挺好，我们彼此不经意的时刻，总会发现两人有很多相同的爱好，到现在，我真觉得，爱情这个东西，也许就是冥冥中注定的，仿佛毫不费力，仿佛前世已经相见，我们只需静静地做好自己，耐心地等待生命中的另一半总会到来。<strong><em>有时爱情是追不来的，真正相爱的人是会互相吸引的</em></strong>，所以单身狗们，不要焦虑，不要感到绝望，在生命里还没有找到另一半的时刻，你只需把自己照顾好，也可以去改变自己，试着去做一些让未来的女朋友高兴的事，比如学做饭，学习去读书等等，我觉得只要我们把自己做好了，就一定会找到生命中的她的。</p>
+</li>
+</ul>
+<p><strong>祝大家早日有情人终成眷属！</strong></p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><p> 最后，还想说的是，在in实习，除了工作，经常聆听leader的教诲，我都觉得很有道理。我还记得他和我说，看一个人，除了工作能力外，看他的为人呐，性格呐都是很重要的事。后来直到我快走的时候，他还和我谈心，给予了我很多的建议，最后还给了我祝福，真的很感谢他。</p>
+<p> 后天我就要回学校了，感谢在in工作的三个月里，与我相处的小伙伴们，@晨晨，@司南，@乐涤，@方圆，@图图（谢谢我们的红娘<del>O(∩_∩)O</del>），@糖宝，@小田，@小高，@汤圆，@冬冬，@抹茶，@果冻，@清水姐姐，@耗子，@辰姐，@我的另一半等，谢谢你们，你们是我生命中遇到的贵人，祝福你们永远开心，永远快乐。</p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+      <tags>
+        <tag>心路</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用 LaTeX 排版技术书籍</title>
+    <url>/2016/10/10/latex-txt/</url>
+    <content><![CDATA[<p>最近要写技术文档，里面包含大量的数学公式，本来想用markdown，但是<br>markdown不适合提交到公司，于是想着还是用自己学过的Latex吧。</p>
+<p>于是在网上去搜使用Latex写技术文档/技术书籍的模板，还真找到了一篇，即<a href="https://github.com/chenshuo/typeset" target="_blank" rel="noopener">《用 LaTeX 排版技术书籍》</a>。本来他提示使用tex studio编译，但我使用tex studio编译后可以运行，却不能导出pdf，总是提示：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">&lt;span style="font-size:18px;"&gt;** WARNING ** Obsolete four arguments of "endchar" will be used for Type 1 "seac" operator.</span><br><span class="line">** ERROR ** This font using the "seac" command for accented characters...</span><br><span class="line"></span><br><span class="line">Output file removed.</span><br><span class="line"> )</span><br><span class="line">(see the transcript file for additional information)</span><br><span class="line">Error 1 (driver return code) generating output;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>查了半天原因。最后定位在一个list环境中。查了一下google，一下子就找到了原来也有人犯过<a href="http://www.voidcn.com/blog/u012176591/article/p-1556407.html" target="_blank" rel="noopener">同样的毛病</a>。具体的改正方法竟然是将一个<strong>“,”</strong>移到<strong>“}”</strong>外面去，结果一下子就编译成功了。</p>
+<a id="more"></a>
+
+<p>下面叙述一下我的安装步骤（仅限在Windows平台），以供后来者借鉴。</p>
+<ol>
+<li>在<a href="https://github.com/chenshuo/typeset" target="_blank" rel="noopener">Github</a>上下载源文件</li>
+<li>下载所需字体，见百度网盘：<a href="http://pan.baidu.com/s/1qXKFSxY" target="_blank" rel="noopener">http://pan.baidu.com/s/1qXKFSxY</a> ,下载完后直接点击安装即可。</li>
+<li>安装ctex,可以在<a href="http://www.ctex.org/HomePage" target="_blank" rel="noopener">这里</a>下载。或者也可以安装tex studio，安装tex studio，应该先安装ctex或者MikTex,再安装tex studio。</li>
+</ol>
+<p><strong>注意：</strong> MikTex才是tex核心（包管理器），而tex studio或者ctex是编辑器而已。也可以参考《<a href="http://www.cnblogs.com/joyeecheung/p/3596255.html" target="_blank" rel="noopener">TeX Live &amp; TeXstudio 安装手记</a>》使用TeX Live作为包管理器，只是我在windows下安装失败了。<br>所以我还是选择了ctex和MikTex+tex studio。<br>4. 安装好以后打开下载好的文件，在里面找到chapLayout.tex,打开，定位到190行左右，</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begindot</span></span></span><br><span class="line"><span class="tag">\<span class="name">item</span><span class="string">[]</span></span> &#123;<span class="tag">\<span class="name">small</span></span> <span class="tag">\<span class="name">fontspec</span><span class="string">&#123;Latin Modern Mono&#125;</span></span> printf("Hello <span class="tag">\<span class="name">%</span></span>s<span class="tag">\<span class="name">bs</span></span> n", name);&#125; [cmtt]</span><br><span class="line"><span class="tag">\<span class="name">item</span><span class="string">[]</span></span> &#123;<span class="tag">\<span class="name">small</span></span> <span class="tag">\<span class="name">fontspec</span><span class="string">[Mapping=tex-text-tt]</span><span class="string">&#123;Inconsolata&#125;</span></span> printf("Hello <span class="tag">\<span class="name">%</span></span>s<span class="tag">\<span class="name">bs</span></span> n", name); &#125;[Inconsolata]</span><br><span class="line"><span class="tag">\<span class="name">myenddot</span></span></span><br></pre></td></tr></table></figure>
+<p>将第二行的<strong>“;”</strong>写到<strong>“}”</strong>外面去，即：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="tag">\<span class="name">begindot</span></span></span><br><span class="line"><span class="tag">\<span class="name">item</span><span class="string">[]</span></span> &#123;<span class="tag">\<span class="name">small</span></span> <span class="tag">\<span class="name">fontspec</span><span class="string">&#123;Latin Modern Mono&#125;</span></span> printf("Hello <span class="tag">\<span class="name">%</span></span>s<span class="tag">\<span class="name">bs</span></span> n", name);&#125; [cmtt]</span><br><span class="line"><span class="tag">\<span class="name">item</span><span class="string">[]</span></span> &#123;<span class="tag">\<span class="name">small</span></span> <span class="tag">\<span class="name">fontspec</span><span class="string">[Mapping=tex-text-tt]</span><span class="string">&#123;Inconsolata&#125;</span></span> printf("Hello <span class="tag">\<span class="name">%</span></span>s<span class="tag">\<span class="name">bs</span></span> n", name)&#125;; [Inconsolata]</span><br><span class="line"><span class="tag">\<span class="name">myenddot</span></span></span><br></pre></td></tr></table></figure>
+<p>5.编译运行即可。</p>
+]]></content>
+      <categories>
+        <category>写作</category>
+      </categories>
+      <tags>
+        <tag>Latex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在 Jacman使用 Mathjax 输出数学公式</title>
+    <url>/2015/06/25/mathjax/</url>
+    <content><![CDATA[<h2 id="配置Mathjax"><a href="#配置Mathjax" class="headerlink" title="配置Mathjax"></a>配置Mathjax</h2><p>由于Jacman主题支持写 LaTex 数学公式,因此只需要做到下面两步，即可使用。<br>1、在主题Jacman的_config.yml加入mathjax: true，即</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">close_aside: false  #close sidebar in post page if true</span><br><span class="line">mathjax: true      #enable mathjax if true</span><br></pre></td></tr></table></figure>
+<p>2、在文章文件开头的前言中，加上一行mathjax: true，即可在文中写 LaTex 公式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 测试Mathjax</span><br><span class="line">date: 2014-2-14 23:25:23</span><br><span class="line">tags: Mathmatics</span><br><span class="line">categories: Mathjax</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>也可参考文章<br>《<a href="http://lukang.me/2014/mathjax-for-hexo.html" target="_blank" rel="noopener">在 Hexo 中完美使用 Mathjax 输出数学公式</a>》，但是这篇文章中讲的问题在Jacman中没有出现。下面举例说明：</p>
+<p>3、原文章中有下面一段话 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">博主你好，你这样用mathjax，在用markdown写博客时能正常书写带下标的公式吗？</span><br><span class="line">比如下面一段话：</span><br><span class="line">This is an example for $x_mu$ and $y_mu$.</span><br><span class="line">两个&#96;—&#96;会被看成markdown中的斜体。</span><br></pre></td></tr></table></figure>
+<p>这个的解决办法可以使用转义符, 即如下输出即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">This is an example for $x\_mu$ and $y\_mu$.</span><br></pre></td></tr></table></figure>
+<p>经在Jacman中试验：<br>效果：<br>      This is an example for $x_mu$ and $y_mu$.<br>      This is an example for $x_mu$ and $y_mu$.<br>效果是一样的。</p>
+<h2 id="安装Hexo-math"><a href="#安装Hexo-math" class="headerlink" title="安装Hexo-math"></a>安装Hexo-math</h2><p><a href="https://github.com/akfish/hexo-math" target="_blank" rel="noopener">Hexo-math</a>插件在Jacman中作用很大，可以实现：</p>
+<ul>
+<li>自动部署MathJax</li>
+<li>添加MathJax Tag</li>
+</ul>
+<p>安装也十分方便：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-math --save</span><br></pre></td></tr></table></figure>
+<p>然后在全局_config.yml文件中添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">plugins:</span><br><span class="line">- hexo-math</span><br></pre></td></tr></table></figure>
+<p>新版hexo-math不再需要运行 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo math install</span><br></pre></td></tr></table></figure>
+<p>如下举例说明hexo-math的用法：</p>
+<p><strong>MathJax Inline：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Simple inline $a = b + c$.</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p>Simple inline $a = b + c$.</p>
+<p><strong>MathJax Block：</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$$\frac&#123;\partial u&#125;&#123;\partial t&#125;</span><br><span class="line">= h^2 \left( \frac&#123;\partial^2 u&#125;&#123;\partial x^2&#125; +</span><br><span class="line">\frac&#123;\partial^2 u&#125;&#123;\partial y^2&#125; +</span><br><span class="line">\frac&#123;\partial^2 u&#125;&#123;\partial z^2&#125;\right)$$</span><br></pre></td></tr></table></figure>
+<p>效果：<br>$$\frac{\partial u}{\partial t}<br>= h^2 \left( \frac{\partial^2 u}{\partial x^2} +<br>\frac{\partial^2 u}{\partial y^2} +<br>\frac{\partial^2 u}{\partial z^2}\right)$$</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mexopencv的使用</title>
+    <url>/2015/07/14/mexopencv/</url>
+    <content><![CDATA[<p>下面我们将介绍Mexopencv的使用。<br>首先介绍几个常用的帮助链接：</p>
+<ol>
+<li><a href="http://kyamagu.github.io/mexopencv/matlab/" target="_blank" rel="noopener">MATLAB File Help: cv</a> ：这里列出了cv里的全部函数</li>
+<li><a href="http://www.opencv.org.cn/opencvdoc/2.3.2/html/index.html" target="_blank" rel="noopener">OpenCV 2.3.2 documentation</a> :这里可以搜索到opencv的函数</li>
+<li><a href="https://github.com/kyamagu/mexopencv/tree/v2.4" target="_blank" rel="noopener">mexopencv Github主页</a></li>
+<li><a href="http://kyamagu.github.io/mexopencv/" target="_blank" rel="noopener">mexopencv主页</a></li>
+<li><a href="http://kyamagu.github.io/mexopencv/html/" target="_blank" rel="noopener">mex interface for opencv library</a><a id="more"></a>
+
+</li>
+</ol>
+<h2 id="添加Mexopencv的路径"><a href="#添加Mexopencv的路径" class="headerlink" title="添加Mexopencv的路径"></a>添加Mexopencv的路径</h2><p>方法一：在matlab中找到Set Path选项，添加mexopencv路径;<br>方法二：addpath(‘/path to mexopencv’);如我的路径为：<br><code>addpath(&#39;D:/Program Files/mexopencv-2.4&#39;);</code></p>
+<h2 id="命名符的使用"><a href="#命名符的使用" class="headerlink" title="命名符的使用"></a>命名符的使用</h2><p>在程序中，我们既可以使用带有cv.*的函数，也可以先载入包名，然后直接使用函数，就像C++一样。如： </p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">img = imread(<span class="string">'1.jpg'</span>);</span><br><span class="line">img2=im2double(img);</span><br><span class="line">myKnernel = [<span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>;<span class="number">-1</span>, <span class="number">5</span>, <span class="number">-1</span>; <span class="number">0</span>, <span class="number">-1</span>, <span class="number">0</span>];</span><br><span class="line">result = cv.filter2D(img2, myKnernel);  <span class="comment">% with package name 'cv'</span></span><br><span class="line">import cv.*;</span><br><span class="line">result =filter2D(img2, myKnernel);  <span class="comment">% with package name 'cv'</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：一些函数如cv.imread 重载了MATLAB中的内建函数。如果你想避免命名冲突，可以使用作用域名字,即使用cv.*。</p>
+<h2 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h2><p>在Matlab可以通help command查找相关函数列表。</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">&gt;&gt; help cv; <span class="comment">% shows list of functions in package 'cv'</span></span><br><span class="line"></span><br><span class="line">Contents of cv:</span><br><span class="line"></span><br><span class="line">GaussianBlur                   - Smoothes an image using a Gaussian filter</span><br><span class="line">Laplacian                      - Calculates the Laplacian of an image</span><br><span class="line">VideoCapture                   - VideoCapture wrapper class</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&gt;&gt; help cv.VideoCapture; <span class="comment">% shows documentation of VideoCapture</span></span><br><span class="line"></span><br><span class="line">VIDEOCAPTURE  VideoCapture wrapper class</span><br><span class="line"></span><br><span class="line"> Class <span class="keyword">for</span> video capturing from video files or cameras. The class</span><br><span class="line"> provides MATLAB API <span class="keyword">for</span> capturing video from cameras or <span class="keyword">for</span> reading</span><br><span class="line"> video files. Here is how the class can be used:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p> mexopencv里面包含了一个简实用文档，可以生成MATLAB的HTML帮助文件。如下命令可以在doc/matlab/下生成用户手册。<br>首先设置matlab当前目录为 D:\Program Files\mexopencv-2.4<br>然后键入：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">addpath(<span class="string">'utils'</span>);</span><br><span class="line">MDoc;</span><br></pre></td></tr></table></figure>
+<p>你可以运行由test路径下的UnitTest类生成的测试函数。里面包含了mexopencv支持的各种函数功能，一旦出现PASS,说明此功能正常，可以使用。</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">addpath(<span class="string">'test'</span>);</span><br><span class="line">UnitTest;</span><br></pre></td></tr></table></figure>
+<p>执行完后，出现如下结果：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">== TestANN_MLP ======</span><br><span class="line">-- test_1 ------</span><br><span class="line">PASS</span><br><span class="line">== TestAdaptiveThreshold ======</span><br><span class="line">-- test_1 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_2 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_3 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_4 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_5 ------</span><br><span class="line">PASS</span><br><span class="line">-- test_error_1 ------</span><br><span class="line">PASS</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>查看samples/文件夹，发现里面共有五个文件,均是mexopencv的具体应用。下面我们将具体讲解其中的三个例子。<br>以下示例均需先加入mexopencv的路径到matlab的path中，并且将samples/加入路径,用代码表达为：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">addpath(<span class="string">'D:/Program Files/mexopencv-2.4'</span>);<span class="comment">%载入Mexopencv路径</span></span><br><span class="line">addpath(<span class="string">'samples'</span>);<span class="comment">%载入sample路径</span></span><br></pre></td></tr></table></figure>
+<h3 id="SURF-detector-m"><a href="#SURF-detector-m" class="headerlink" title="SURF_detector.m"></a>SURF_detector.m</h3><p>用于显示图片特征点</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SURF_detector</span></span></span><br><span class="line"><span class="comment">%SURF_DETECTOR  feature detector demo</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="comment">% Before start, addpath('/path/to/mexopencv');</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%载入图像，并转化为灰度图</span></span><br><span class="line">im = imread(fullfile(mexopencv.root(),<span class="string">'test'</span>,<span class="string">'img001.jpg'</span>));</span><br><span class="line"><span class="comment">%这里fullfile为定义文件的全路径，可以查看帮助</span></span><br><span class="line">im = cv.cvtColor(im,<span class="string">'RGB2GRAY'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">%设置特征检测方法，这里使用SUFT，也可以使用SIFT或者ORB</span></span><br><span class="line">detector = cv.FeatureDetector(<span class="string">'SURF'</span>);</span><br><span class="line">keypoints = detector.detect(im);</span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制特征点，并显示</span></span><br><span class="line">im_keypoints = cv.drawKeypoints(im,keypoints);</span><br><span class="line">imshow(im_keypoints);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>运行 SURF_detector，即可出现特征点图。如下：<br><img src="https://dn-xiamenwcy.qbox.me/mex/img001.jpg" alt=""></p>
+<h3 id="SURF-descriptor-m"><a href="#SURF-descriptor-m" class="headerlink" title="SURF_descriptor.m"></a>SURF_descriptor.m</h3><p>用于计算特征点的特征向量(或者叫特征描述子）</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">SURF_descriptor</span></span></span><br><span class="line"><span class="comment">%SURF_DETECTOR  feature detector demo</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="comment">% Before start, addpath('/path/to/mexopencv');</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"></span><br><span class="line"><span class="comment">%载入图并转为灰度图</span></span><br><span class="line">im1 = imread(fullfile(mexopencv.root(),<span class="string">'test'</span>,<span class="string">'img001.jpg'</span>));</span><br><span class="line">im1 = cv.cvtColor(im1,<span class="string">'RGB2GRAY'</span>);</span><br><span class="line">im2 = <span class="built_in">fliplr</span>(im1);<span class="comment">%将图像左右翻转</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">%使用SURF特征检测方法检测特征点</span></span><br><span class="line">detector = cv.FeatureDetector(<span class="string">'SURF'</span>);</span><br><span class="line">keypoints1 = detector.detect(im1);</span><br><span class="line">keypoints2 = detector.detect(im2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%提取特征向量</span></span><br><span class="line">extractor = cv.DescriptorExtractor(<span class="string">'SURF'</span>);</span><br><span class="line">descriptors1 = extractor.compute(im1,keypoints1);</span><br><span class="line">descriptors2 = extractor.compute(im1,keypoints2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%进行特征匹配，这里使用基于L2距离（即欧式距离）的暴力搜索</span></span><br><span class="line">matcher = cv.DescriptorMatcher(<span class="string">'BruteForce'</span>);</span><br><span class="line"><span class="comment">%  'BruteForce'             L2 distance</span></span><br><span class="line"><span class="comment">%  'BruteForce-L1'          L1 distance</span></span><br><span class="line"><span class="comment">%  'BruteForce-Hamming'     Hamming distance</span></span><br><span class="line"><span class="comment">%  'BruteForce-HammingLUT'  Hamming distance lookup table</span></span><br><span class="line"><span class="comment">%  'FlannBased'             Flann-based indexing</span></span><br><span class="line"> </span><br><span class="line">matches = matcher.match(descriptors1,descriptors2);</span><br><span class="line"></span><br><span class="line"><span class="comment">%绘制特征匹配图</span></span><br><span class="line">im_matches = cv.drawMatches(im1, keypoints1, im2, keypoints2, matches);</span><br><span class="line">imshow(im_matches);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>运行SURF_descriptor，即可出线下图：<br><img src="https://dn-xiamenwcy.qbox.me/mex/surf_desc.jpg" alt=""></p>
+<h3 id="facedetect-m"><a href="#facedetect-m" class="headerlink" title="facedetect.m"></a>facedetect.m</h3><figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">facedetect</span></span></span><br><span class="line"><span class="comment">%FACEDETECT  face detection demo</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="comment">% Before start, addpath('/path/to/mexopencv');</span></span><br><span class="line"><span class="comment">%</span></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">'Face detection demo. Press any key when done.'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% Load cascade file</span></span><br><span class="line">xml_file = fullfile(mexopencv.root(),<span class="string">'test'</span>,<span class="string">'haarcascade_frontalface_alt2.xml'</span>);</span><br><span class="line">classifier = cv.CascadeClassifier(xml_file);</span><br><span class="line"></span><br><span class="line"><span class="comment">% Set up camera</span></span><br><span class="line">camera = cv.VideoCapture;</span><br><span class="line">pause(<span class="number">3</span>); <span class="comment">% Necessary in some environment. See help cv.VideoCapture</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Set up display window</span></span><br><span class="line">window = <span class="built_in">figure</span>(<span class="string">'KeyPressFcn'</span>,@(obj,evt)setappdata(obj,<span class="string">'flag'</span>,<span class="built_in">true</span>));</span><br><span class="line">setappdata(window,<span class="string">'flag'</span>,<span class="built_in">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">% Start main loop</span></span><br><span class="line"><span class="keyword">while</span> <span class="built_in">true</span></span><br><span class="line">    <span class="comment">% Grab and preprocess an image</span></span><br><span class="line">    im = camera.read;</span><br><span class="line">    im = cv.resize(im,<span class="number">0.5</span>);</span><br><span class="line">    gr = cv.cvtColor(im,<span class="string">'RGB2GRAY'</span>);</span><br><span class="line">    gr = cv.equalizeHist(gr);<span class="comment">%直方图均衡化</span></span><br><span class="line">    <span class="comment">% Detect</span></span><br><span class="line">    boxes = classifier.detect(gr,<span class="string">'ScaleFactor'</span>,<span class="number">1.3</span>,...</span><br><span class="line">                                 <span class="string">'MinNeighbors'</span>,<span class="number">2</span>,...</span><br><span class="line">                                 <span class="string">'MinSize'</span>,[<span class="number">30</span>,<span class="number">30</span>]);</span><br><span class="line">    <span class="comment">% Draw results</span></span><br><span class="line">    imshow(im);</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> = <span class="number">1</span>:<span class="built_in">numel</span>(boxes)</span><br><span class="line">        rectangle(<span class="string">'Position'</span>,boxes&#123;<span class="built_in">i</span>&#125;,<span class="string">'EdgeColor'</span>,<span class="string">'g'</span>,<span class="string">'LineWidth'</span>,<span class="number">2</span>);</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">% Terminate if any user input</span></span><br><span class="line">    flag = getappdata(window,<span class="string">'flag'</span>);</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">isempty</span>(flag)||flag, <span class="keyword">break</span>; <span class="keyword">end</span></span><br><span class="line">    pause(<span class="number">0.1</span>);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Close</span></span><br><span class="line">close(window);</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>运行facedetect，即可出线人脸框，可以进行人脸识别.<br>如图：<br><img src="https://dn-xiamenwcy.qbox.me/mex/face.jpg" alt=""></p>
+<h2 id="发展一个新的-MEX-函数"><a href="#发展一个新的-MEX-函数" class="headerlink" title="发展一个新的 MEX 函数"></a>发展一个新的 MEX 函数</h2><p>你所需要做的就是在src/+cv/增加你的MEX源文件。如果你想要增加一个叫myfunc的MEX文件，创建src/+cv/myfunc.cpp. myfunc.cpp将看起来如下：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">#include "mexopencv.hpp"</span><br><span class="line">void mexFunction(int nlhs, mxArray *plhs[],</span><br><span class="line">                 int nrhs, const mxArray *prhs[])</span><br><span class="line">&#123;</span><br><span class="line">    // Check arguments</span><br><span class="line">    <span class="keyword">if</span> (nlhs!=<span class="number">1</span> || nrhs!=<span class="number">1</span>)</span><br><span class="line">        mexErrMsgIdAndTxt(<span class="string">"myfunc:invalidArgs"</span>, <span class="string">"Wrong number of arguments"</span>);</span><br><span class="line"></span><br><span class="line">    // Convert MxArray to cv::Mat</span><br><span class="line">    cv::Mat mat = MxArray(prhs[<span class="number">0</span>]).toMat();</span><br><span class="line"></span><br><span class="line">    // Do whatever you want</span><br><span class="line"></span><br><span class="line">    // Convert cv::Mat back to mxArray*</span><br><span class="line">    plhs[<span class="number">0</span>] = MxArray(mat);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个例子简单地复制input到<strong>cv::Mat</strong>对象，然后再复制到输出对象。注意到<strong>MxArray</strong>转化为<strong>cv::Mat</strong> 对象是通过<strong>mexopencv</strong>来实现的。当然了你想要做更多的事情。一旦你创建好一个文件后，键入<strong>mexopencv.make</strong>去建立你的新函数。编译好的MEX函数将会出现在<strong>+cv/</strong>中，你可以在MATLAB中使用<strong>cv.myfunc</strong>来使用它。</p>
+<p><strong>mexopencv.hpp</strong> 头文件包含了一个类 <strong>MxArray</strong> 去操作 <strong>mxArray</strong> 对象. 大多数情况下这个被用来进行 OpenCV 数据类型和  mxArray的转化。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">int <span class="built_in">i</span>            = MxArray(prhs[<span class="number">0</span>]).toInt();</span><br><span class="line">double d         = MxArray(prhs[<span class="number">0</span>]).toDouble();</span><br><span class="line">bool b           = MxArray(prhs[<span class="number">0</span>]).toBool();</span><br><span class="line">std::string s    = MxArray(prhs[<span class="number">0</span>]).toString();</span><br><span class="line">cv::Mat mat      = MxArray(prhs[0]).toMat();   // For pixels</span><br><span class="line">cv::Mat ndmat    = MxArray(prhs[0]).toMatND(); // For N-D array</span><br><span class="line">cv::Point pt     = MxArray(prhs[<span class="number">0</span>]).toPoint();</span><br><span class="line">cv::Size siz     = MxArray(prhs[<span class="number">0</span>]).toSize();</span><br><span class="line">cv::Rect rct     = MxArray(prhs[<span class="number">0</span>]).toRect();</span><br><span class="line">cv::Scalar sc    = MxArray(prhs[<span class="number">0</span>]).toScalar();</span><br><span class="line">cv::SparseMat sp = MxArray(prhs[0]).toSparseMat(); // Only double to float</span><br><span class="line"></span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(<span class="built_in">i</span>);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(d);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(b);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(s);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(mat);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(ndmat);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(pt);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(siz);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(rct);</span><br><span class="line">plhs[<span class="number">0</span>] = MxArray(sc);</span><br><span class="line">plhs[0] = MxArray(sp); // Only 2D float to double</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Matlab</category>
+      </categories>
+      <tags>
+        <tag>opencv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>模板函数的使用</title>
+    <url>/2016/10/17/moban/</url>
+    <content><![CDATA[<ol>
+<li><font color="#FF0000"> <strong>模板函数应该将声明与定义放在一起</strong></font><br>看如下例题：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;tem.h</span><br><span class="line">#ifndef _TEM_H</span><br><span class="line">#define _TEM_H</span><br><span class="line">template&lt;typename T&gt; T add(T a, T b);</span><br><span class="line">&#x2F;&#x2F;&#123;</span><br><span class="line">&#x2F;&#x2F;return a+b;</span><br><span class="line">&#x2F;&#x2F;&#125;</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;tem.cpp</span><br><span class="line">#include &quot;tem.h&quot;</span><br><span class="line">template &lt;typename T&gt; T add(T a, T b)</span><br><span class="line">&#123; </span><br><span class="line">	return a + b;</span><br><span class="line">&#125;</span><br><span class="line">template int add(int, int);&#x2F;&#x2F;实例化定义，必须放在模板定义的后面</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;main.cpp</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &quot;tem.h&quot;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	cout &lt;&lt; add(1, 2);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+对普通函数来说，声明放在头文件中，定义放在源文件中，其它的地方要使用该函数时，仅需要包含头文件即可，因为编译器编译时是以一个源文件作为单元编译的，当它遇到不在本文件中定义的函数时，若能够找到其声明，则会将此符号放在本编译单元的外部符号表中，链接的时候自然就可以找到该符号的定义了。</li>
+</ol>
+<p>而对模板函数来说，首先明确，模板函数是在编译器遇到<strong>使用模板的代码</strong>时才将模板函数实例化的。若将模板函数声明放在tem.h，模板定义放在tem.cpp,在main.cpp中包含头文件，调用add,按道理说应该实例化int add(int,int)函数，即生成add函数的相应代码，但是此时仅有声明，找不到定义，因此此时，它只会实例化函数的符号，并不会实例化函数的实现，<font color="#FF0000">即这个时候，在main.o编译单元内，它只是将add函数作为一个外部符号，这就是与普通函数的区别，对普通函数来说，此时的add函数已经由编译器生成相应的代码了，而对模板函数来说，此时并没有生成add函数对应的代码。</font>此时编译main.cpp单元不会报错，但链接就会出现add函数未定义的错误。</p>
+<p>因此，我们可以通过显式的实例化定义，即通过加上语句<code>temmplate int add(int,int)</code>,编译器看到此语句将会生成add方法的int版本，这样的话，再链接就不会报错了。此外，这样做通常也能够<font color="#FF0000">提高编译的效率</font>。试想，如果在tem.h文件内定义模板，假如有三个源文件均包含了该头文件且均使用了模板（假定均调用了add模板的int版本），则在这三个源文件内必然都会生成add函数的实例。显然效率不高。而如果像上面那样使用该模板，则只会在tem.cpp文件中实例化。</p>
+<p>同理对于类模板和类模板函数亦如此。<a id="more"></a><br>2. 下面列出几种正确的做法。</p>
+<ul>
+<li><p><strong>声明与实现放在一起</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;limits&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">class A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	A();</span><br><span class="line">	~A();</span><br><span class="line">	template&lt;class T&gt;</span><br><span class="line">	bool almost_equal(T x, T y) &#x2F;&#x2F;成员函数</span><br><span class="line">	&#123;</span><br><span class="line">		&#x2F;&#x2F; the machine epsilon has to be scaled to the magnitude of the values used</span><br><span class="line">		&#x2F;&#x2F; and multiplied by the desired precision in ULPs (units in the last place)</span><br><span class="line">		return std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::epsilon() * std::abs(x + y) * 2</span><br><span class="line">			&#x2F;&#x2F; unless the result is subnormal</span><br><span class="line">			|| std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::min();</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">private:</span><br><span class="line">	bitmap_image* img;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;全局函数</span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">bool almost_equal(T x, T y)</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; the machine epsilon has to be scaled to the magnitude of the values used</span><br><span class="line">	&#x2F;&#x2F; and multiplied by the desired precision in ULPs (units in the last place)</span><br><span class="line">	return std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::epsilon() * std::abs(x + y) * 2</span><br><span class="line">		&#x2F;&#x2F; unless the result is subnormal</span><br><span class="line">		|| std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::min();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这种写法省事，而且适合于多种类型的模板化，很方便。但是如果在多个源文件中仅仅只使用一种实例化，那么这种方法不高效，因为进行了多次编译，下面这种方法将会简化，只进行一次编译。</p>
+</li>
+<li><p><strong>声明与实现分开，但增加显式的模板化</strong></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;A.h</span><br><span class="line">#include &lt;limits&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">class A</span><br><span class="line">&#123;</span><br><span class="line">public:</span><br><span class="line">	template&lt;class T&gt;</span><br><span class="line">	bool almost_equal(T x, T y); &#x2F;&#x2F;成员函数</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;全局函数</span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">bool almost_equal(T x, T y);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;A.cpp</span><br><span class="line">#include &quot;A.h&quot;</span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">bool A::almost_equal(T x, T y)</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; the machine epsilon has to be scaled to the magnitude of the values used</span><br><span class="line">	&#x2F;&#x2F; and multiplied by the desired precision in ULPs (units in the last place)</span><br><span class="line">	return std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::epsilon() * std::abs(x + y) * 2</span><br><span class="line">		&#x2F;&#x2F; unless the result is subnormal</span><br><span class="line">		|| std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::min();</span><br><span class="line">&#125;;</span><br><span class="line">template bool A::almost_equal(double, double); &#x2F;&#x2F;显式化</span><br><span class="line"></span><br><span class="line">template&lt;class T&gt;</span><br><span class="line">bool almost_equal(T x, T y)</span><br><span class="line">&#123;</span><br><span class="line">	&#x2F;&#x2F; the machine epsilon has to be scaled to the magnitude of the values used</span><br><span class="line">	&#x2F;&#x2F; and multiplied by the desired precision in ULPs (units in the last place)</span><br><span class="line">	return std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::epsilon() * std::abs(x + y) * 2</span><br><span class="line">		&#x2F;&#x2F; unless the result is subnormal</span><br><span class="line">		|| std::abs(x - y) &lt; std::numeric_limits&lt;T&gt;::min();</span><br><span class="line">&#125;;</span><br><span class="line">template bool almost_equal(int, int);&#x2F;&#x2F;显式化</span><br></pre></td></tr></table></figure>
+<p>使用时，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	A a;</span><br><span class="line">	bool s1&#x3D;a.almost_equal(1,2); &#x2F;&#x2F;错误，编译器推导出为int，但是实际上面显式化的是double，所以错误，但是改为下面的形式即可正确。</span><br><span class="line">	 s1&#x3D; a.almost_equal&lt;double&gt;(1,2);&#x2F;&#x2F;正确，强制转为double</span><br><span class="line">	bool s &#x3D; almost_equal(1., 2); &#x2F;&#x2F;错误</span><br><span class="line">	s&#x3D; almost_equal&lt;int&gt;(1., 2); &#x2F;&#x2F;正确，强制转为int</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="http://blog.csdn.net/cllcsy/article/details/50485324" target="_blank" rel="noopener">关于模板函数声明与定义的问题</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>使用Hexo搭建主题为Jacman的博客</title>
+    <url>/2015/06/21/my-first-blog/</url>
+    <content><![CDATA[<p>这里仅仅列出我搭建网站时用的一些链接。大致上按照先后顺序。</p>
+<blockquote>
+<ol>
+<li><a href="http://jingyan.baidu.com/article/d8072ac47aca0fec95cefd2d.html" target="_blank" rel="noopener">史上最详细“截图”搭建Hexo博客并部署到Github</a></li>
+<li><a href="http://zipperary.com/categories/hexo/" target="_blank" rel="noopener">hexo系列教程</a></li>
+<li><a href="http://wuchong.me/jacman/2014/11/20/how-to-use-jacman/" target="_blank" rel="noopener">如何使用 Jacman 主题</a></li>
+<li><a href="http://jasonxiang.com/landscape-plus/2015/05/07/Landscape-plus/#ds-thread" target="_blank" rel="noopener">使用Landscape Plus主题</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo官网</a></li>
+<li><a href="https://github.com/wuchong/jacman" target="_blank" rel="noopener">Jacman Github地址</a></li>
+<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="noopener">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></li>
+<li><a href="http://yangjian.me/workspace/building-blog-with-hexo/" target="_blank" rel="noopener">使用hexo搭建博客</a></li>
+</ol>
+</blockquote>
+<p>推荐两个markdown在线和线下编辑器：</p>
+<blockquote>
+<ul>
+<li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">Cmd Markdown 在线编辑阅读器</a></li>
+<li><a href="http://cloose.github.io/CuteMarkEd/" target="_blank" rel="noopener">CuteMarkEd线下编辑器</a></li>
+<li><a href="http://www.markdown.cn/" target="_blank" rel="noopener">Markdown语法说明1</a></li>
+<li><a href="http://blog.chinaunix.net/uid-21712186-id-3483852.html" target="_blank" rel="noopener">Markdown语法说明2</a></li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>注意事项：</p>
+<blockquote>
+<ol>
+<li>安装新浪微博秀时，除了必须填上author属性下tsina和weibo_verifier的值，前者是您微博ID，后者是您微博秀的验证码，访问 <a href="http://app.weibo.com/tool/weiboshow" target="_blank" rel="noopener">http://app.weibo.com/tool/weiboshow</a> 可以获得您的 verifier。<br>如下图：<br><img src="http://7xjv9y.com1.z0.glb.clouddn.com/sina_show.JPG?attname=&e=1434985163&token=4MEaKHFpIyQCXFDjZQ9f0DmE0TMUFXIys9b85eTo:CcfzXKR_ukn2WzhnGPIZ5-GR7S4" alt=""><br>其中uid即为tsina, verifier也就是我们需要的 verifier。<br>填完后，还需要在在themes/jacman/_config.yml中，<br>添加如下：<blockquote>
+<p>widgets:</p>
+<ul>
+<li>weibo</li>
+</ul>
+</blockquote>
+</li>
+<li>使用hexo new photo “your titile”建立图片类文章,相关方法见<br><a href="http://wuchong.me/jacman/2014/11/20/how-to-use-jacman/" target="_blank" rel="noopener">如何使用 Jacman 主题</a> </li>
+<li>使用hexo new “my new post”建立普通blog</li>
+<li>使用hexo new page “pageName” #新建页面</li>
+<li>关于网站的优化见：《<a href="http://lukang.me/2014/hexo-page-speed.html" target="_blank" rel="noopener">Hexo 静态博客加速</a>》、《<a href="http://kevinsfork.info/2015/02/25/hexo-speedup-instantclick/" target="_blank" rel="noopener">Hexo折腾笔记（一）博客加速以及解决instantclick的兼容问题</a>》、《<a href="https://github.com/FlashSoft/hexo-console-optimize" target="_blank" rel="noopener">Hexo输出内容优化</a>》</li>
+</ol>
+</blockquote>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python 学习第一课</title>
+    <url>/2016/11/05/python-lesson1/</url>
+    <content><![CDATA[<p>今天开始学习python，用的教程主要是网上的mooc，为了更好地梳理自己的学习思路，特将一些比较重要的点记录下来。</p>
+<h1 id="寻找第n个默尼森数"><a href="#寻找第n个默尼森数" class="headerlink" title="寻找第n个默尼森数"></a>寻找第n个默尼森数</h1><p>寻找第n个默尼森数。<br>代码格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def prime(num):  </span><br><span class="line">...</span><br><span class="line">def monisen(no):  </span><br><span class="line">… …  </span><br><span class="line">return xxx</span><br><span class="line">print monisen(input())#此处不需要自己输入，只要写这样一条语句即可，主要完成monisen()函数</span><br><span class="line"># print(monisen(int(input()))) in Python 3.x（5分）</span><br></pre></td></tr></table></figure>
+
+<p>题目内容：找第n个默尼森数。P是素数且M也是素数，并且满足等式$M=2^P-1$，则称M为默尼森数。例如，$P=5，M=2^P-1=31$，5和31都是素数，因此31是默尼森数。<br>输入格式:用input()函数输入，注意如果Python 3中此函数的返回类型<br>输出格式：int类型<br>输入样例：4<br>输出样例：127<br>时间限制：500ms内存限制：32000kb</p>
+<a id="more"></a>
+
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p> 思路是通过枚举所有的p（即素数），来寻找第n个默尼森数。初始时刻，设定一定长度的数字列表来寻找素数，然后在素数表中找默尼森数，当找到一个默尼森数，就看看当前的默尼森数是否是第n个。如果在当前素数表中未找到第n个默尼森数，则需要增加素数，继续查找。也就是通过递归的方法，直到找到第 n个默尼森数为止。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">Created on Sat Oct 01 18:32:41 2016</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">@author: dukeyu</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> math <span class="keyword">import</span> sqrt </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 缓存默尼森数 </span></span><br><span class="line">cacheMonisen = [] </span><br><span class="line"></span><br><span class="line"><span class="comment"># 缓存素数 </span></span><br><span class="line">cachePrime = [] </span><br><span class="line"></span><br><span class="line"><span class="comment"># 素数范围，搜索更多的素数 </span></span><br><span class="line">minNumber = <span class="number">2</span> </span><br><span class="line">maxNumber = <span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">isPrime</span><span class="params">(x)</span>:</span> </span><br><span class="line">    <span class="string">'''判断是不是素数'''</span> </span><br><span class="line">    k = int(sqrt(x)) </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, k + <span class="number">1</span>): </span><br><span class="line">        <span class="keyword">if</span> x % i == <span class="number">0</span>: </span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span> </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addCachePrime</span><span class="params">()</span>:</span> </span><br><span class="line">    <span class="string">'''增加素数缓存'''</span> </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(minNumber, maxNumber): </span><br><span class="line">        <span class="keyword">if</span> isPrime(i) <span class="keyword">and</span> (i <span class="keyword">not</span> <span class="keyword">in</span> cachePrime): </span><br><span class="line">            cachePrime.append(i) </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">monisen</span><span class="params">(no)</span>:</span></span><br><span class="line">    <span class="string">'''求解第N个默尼森数'''</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 初始化素数缓存 </span></span><br><span class="line">    addCachePrime()</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> no &lt;= len(cacheMonisen): </span><br><span class="line">        <span class="keyword">return</span> cacheMonisen[no - <span class="number">1</span>]</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> cachePrime: </span><br><span class="line">        <span class="comment"># M和P均为素数 </span></span><br><span class="line">        p = i</span><br><span class="line">        m = pow(<span class="number">2</span>, p) - <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> isPrime(p) <span class="keyword">and</span> isPrime(m):</span><br><span class="line">            cacheMonisen.append(m) </span><br><span class="line">        <span class="keyword">if</span> no == len(cacheMonisen): </span><br><span class="line">            <span class="keyword">break</span> </span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> no == len(cacheMonisen):</span><br><span class="line">        <span class="keyword">return</span> cacheMonisen[<span class="number">-1</span>]</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">else</span>: </span><br><span class="line">        <span class="comment"># 素数范围不足，须增加素数，继续查找 </span></span><br><span class="line">        <span class="keyword">global</span> minNumber, maxNumber</span><br><span class="line">        minNumber, maxNumber = maxNumber, maxNumber * <span class="number">2</span> </span><br><span class="line">        <span class="keyword">return</span> monisen(no) </span><br><span class="line"><span class="keyword">print</span> monisen(input())</span><br></pre></td></tr></table></figure>
+<h1 id="Python中元组，列表，字典的区别"><a href="#Python中元组，列表，字典的区别" class="headerlink" title="Python中元组，列表，字典的区别"></a>Python中元组，列表，字典的区别</h1><p>Python中,有3种内建的数据结构:列表、元组和字典。</p>
+<h2 id="1-列表"><a href="#1-列表" class="headerlink" title="1.列表"></a>1.列表</h2><p>list是处理一组有序项目的数据结构，即你可以在一个列表中存储一个序列的项目。列表中的项目。列表中的项目应该包括在方括号中，这样python就知道你是在指明一个列表。一旦你创建了一个列表，你就可以添加，删除，或者是搜索列表中的项目。由于你可以增加或删除项目，我们说列表是可变的数据类型，即这种类型是可以被改变的，并且列表是可以嵌套的。<br>实例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#coding&#x3D;utf-8</span><br><span class="line">animalslist&#x3D;[&#39;fox&#39;,&#39;tiger&#39;,&#39;rabbit&#39;,&#39;snake&#39;]</span><br><span class="line">print &quot;I don&#39;t like these&quot;,len(animalslist),&#39;animals...&#39;</span><br><span class="line"></span><br><span class="line">for items in animalslist:</span><br><span class="line">     print items</span><br><span class="line"></span><br><span class="line">print &quot;\n操作后&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对列表的操作,添加,删除，排序<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">animalslist.append(&#39;pig&#39;)</span><br><span class="line">del animalslist[0]</span><br><span class="line">animalslist.sort()</span><br><span class="line">for i in range(0,len(animalslist)):</span><br><span class="line">    print animalslist[i]</span><br></pre></td></tr></table></figure>
+结果：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I don&#39;t like these 4 animals...</span><br><span class="line">fox tiger rabbit snake</span><br><span class="line">操作后</span><br><span class="line">pig rabbit snake tiger</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="2-元组"><a href="#2-元组" class="headerlink" title="2.元组"></a>2.元组</h2><p>元祖和列表十分相似，不过元组是不可变的。即你不能修改元组。元组通过圆括号中用逗号分隔的项目定义。元组通常用在使语句或用户定义的函数能够安全的采用一组值的时候，即被使用的元组的值不会改变。元组可以嵌套。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; zoo&#x3D;(&#39;wolf&#39;,&#39;elephant&#39;,&#39;penguin&#39;)</span><br><span class="line">&gt;&gt;&gt; zoo.count(&#39;penguin&#39;)</span><br><span class="line">1</span><br><span class="line">&gt;&gt;&gt; zoo.index(&#39;penguin&#39;)</span><br><span class="line">2</span><br><span class="line">&gt;&gt;&gt; zoo.append(&#39;pig&#39;)</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">AttributeError: &#39;tuple&#39; object has no attribute &#39;append&#39;</span><br><span class="line">&gt;&gt;&gt; del zoo[0]</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">TypeError: &#39;tuple&#39; object doesn&#39;t support item deletion</span><br></pre></td></tr></table></figure>
+<h2 id="3-字典"><a href="#3-字典" class="headerlink" title="3.字典"></a>3.字典</h2><p>字典类似于你通过联系人名称查找地址和联系人详细情况的地址簿，即，我们把键（名字）和值（详细情况）联系在一起。注意，键必须是唯一的，就像如果有两个人恰巧同名的话，你无法找到正确的信息。<br>     键值对在字典中以这样的方式标记：<br>     <code>d = {key1 : value1, key2 : value2</code> }。注意它们的键/值对用冒号分割，而各个对用逗号分割，所有这些都包括在花括号中。另外，记住字典中的键/值对是没有顺序的。如果你想要一个特定的顺 序，那么你应该在使用前自己对它们排序。<br>实例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#coding&#x3D;utf-8</span><br><span class="line">dict1&#x3D;&#123;&#39;zhang&#39;:&#39;张家辉&#39;,&#39;wang&#39;:&#39;王宝强&#39;,&#39;li&#39;:&#39;李冰冰&#39;,&#39;zhao&#39;:&#39;赵薇&#39;&#125;</span><br><span class="line">#字典的操作，添加，删除，打印</span><br><span class="line">dict1[&#39;huang&#39;]&#x3D;&#39;黄家驹&#39;</span><br><span class="line">del dict1[&#39;zhao&#39;]</span><br><span class="line">for firstname,name in dict1.items():</span><br><span class="line">    print firstname,name</span><br></pre></td></tr></table></figure>
+<p>结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">li 李冰冰</span><br><span class="line">wang 王宝强</span><br><span class="line">huang 黄家驹</span><br><span class="line">zhang 张家辉</span><br></pre></td></tr></table></figure>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
+<li><a href="http://blog.csdn.net/yuyu391/article/details/52718860" target="_blank" rel="noopener">http://blog.csdn.net/yuyu391/article/details/52718860</a></li>
+<li><a href="http://blog.csdn.net/yasi_xi/article/details/38384047" target="_blank" rel="noopener">http://blog.csdn.net/yasi_xi/article/details/38384047</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>七牛云存储使用</title>
+    <url>/2015/06/25/qiniu-deploy/</url>
+    <content><![CDATA[<p><a href="https://portal.qiniu.com/" target="_blank" rel="noopener">七牛</a>是国内专为移动时代开发者打造的数据管理平台，为互联网网站和移动App提供数据的在线托管、传输加速以及图片、音视频等富媒体的云处理服务。使用七牛云存储，可以在线托管图片、视频，可以在线生成外接地址，供博客使用。你可以通过点击<a href="https://portal.qiniu.com/signup?code=3le1u161eh7iq" target="_blank" rel="noopener">链接</a><br>注册并成为标准用户，这样我将获得5GB超大下载流量！十分感谢。</p>
+<a id="more"></a>
+
+<h2 id="新建空间"><a href="#新建空间" class="headerlink" title="新建空间"></a>新建空间</h2><p><img src="https://dn-xiamenwcy.qbox.me/qiniu/register.jpg" alt=""><br>选择公开空间，通用。当然了选择其它也可以。如果选择私有空间，在后面的生成外部链接不是很方便。<br>待生成空间后，我们可以去<strong>空间设置</strong>里设置空间的一些属性。<br>尤其是我们最好设置一个https域名。待设置好https域名后我们<br>选择默认域名后，在七牛控制台中引用的URL以此域名显示。<br><img src="https://dn-xiamenwcy.qbox.me/qiniu/qidomain1.jpg" alt=""><br><img src="https://dn-xiamenwcy.qbox.me/qiniu/qiniudamain2.jpg" alt=""></p>
+<h2 id="上传资源"><a href="#上传资源" class="headerlink" title="上传资源"></a>上传资源</h2><p><strong>方法1.</strong> 我们可以在空间–&gt;内容管理中上传资料，这种方法是手动上传，且不能使用文件夹上传，一旦数量过多，速度很慢，不方便。<br><strong>方法2.</strong> 使用<a href="http://developer.qiniu.com/docs/v6/tools/qrsbox.html" target="_blank" rel="noopener">QRSBox</a>上传资料。 QRSBox有windows版本，但是官网提供的在我的电脑上不能使用，因此我使用了<br><a href="http://www.gezila.com/ruanjian/wangluo/74872.html" target="_blank" rel="noopener">格子啦</a>网上提供的资源或者也可以点击链接<a href="https://dn-xiamenwcy.qbox.me/QRSBox.zip" target="_blank" rel="noopener">QRSBox下载</a>下载使用。<br>使用方法可以参考<a href="http://developer.qiniu.com/docs/v6/tools/qrsbox.html" target="_blank" rel="noopener">http://developer.qiniu.com/docs/v6/tools/qrsbox.html</a><br>和<a href="http://www.mfbuluo.com/5372.html" target="_blank" rel="noopener">http://www.mfbuluo.com/5372.html</a>。需要注意的是：<br><strong>Windows 平台上路径的表示格式为：盘符:/目录，比如 E 盘下的目录 data 表示为：e:/data 。</strong></p>
+<h2 id="图片使用"><a href="#图片使用" class="headerlink" title="图片使用"></a>图片使用</h2><p>当我们设置空间为公开空间时，我们上传的资料会自动生成外部链接：<br>如 <code>https://dn-***.qbox.me/**/***.png</code>，当我们设置空间为私有空间时，需要自己设置外部链接，不方便。<br>我们还可以使用空间的数据处理来修改图片（如图片大小等）。<br><img src="https://dn-xiamenwcy.qbox.me/qiniu/img.jpg" alt=""><br>使用范例如下：<br><code>https://dn-portal-files.qbox.me/sample1.jpg?imageView2/1/w/100/h/100/q/75</code>，即在你设计新的图片样式后将原有外部链接加上<strong>?</strong>号，后面再加上样式df即可。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>七牛</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Matlab Implementation （version 2.0）of Supervised Descent Method</title>
+    <url>/2015/08/14/sdm/</url>
+    <content><![CDATA[<p>我们下载了<a href="https://github.com/tntrung/impSDM" target="_blank" rel="noopener">Github</a>上的代码，并仔细阅读了其中的细节。最后我们对源代码做了一些修正(新代码已上传到<a href="https://github.com/xiamenwcy/impSDM/tree/dev1" target="_blank" rel="noopener">Github</a>)，主要包括：</p>
+<blockquote>
+<ul>
+<li>修复了代码运行中出现的一些bug</li>
+<li>添加了一些函数，使代码更简洁</li>
+<li>训练阶段我们采用了分批处理，优化了内存</li>
+<li>参考论文<a href="https://dn-xiamenwcy.qbox.me/sdm/Extended%20Supervised%20Descent%20Method%20for%20Robust%20Face%20Alignment.pdf" target="_blank" rel="noopener">《Extended Supervised Descent Method for Robust Face Alignment》</a>，优化了源程序</li>
+<li>在测试阶段，我们使用了逆的缩放和平移变换将得到的aligned_shape<br>转换为原始图片的特征点true_shape</li>
+<li>添加了详细的注释，使之更容易明白。</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+
+
+<h2 id="Dependency"><a href="#Dependency" class="headerlink" title="Dependency:"></a>Dependency:</h2><blockquote>
+<ul>
+<li>Vlfeat library: <a href="http://www.vlfeat.org/" target="_blank" rel="noopener">http://www.vlfeat.org/</a><br>   提供了hog/sift特征函数，程序默认使用hog特征，如果要使用sift特征，你可以使用xx_sift.m提供的接口（见commom/desc/xx_sift.m）.如果使用Vlfeat的sift,你需要修改程序。因为程序默认的sift接口为xx_sift.m</li>
+<li>libLinear:  <a href="http://www.csie.ntu.edu.tw/~cjlin/liblinear/" target="_blank" rel="noopener">http://www.csie.ntu.edu.tw/~cjlin/liblinear/</a><br>   使用其提供的svm方法计算超定方程组的根</li>
+<li>mexopencv: <a href="https://github.com/kyamagu/mexopencv" target="_blank" rel="noopener">https://github.com/kyamagu/mexopencv</a><br>使用其提供的人脸检测程序（不过程序中我们一般以ground_truth的特征点的包围盒替代，更准确）</li>
+</ul>
+</blockquote>
+<h2 id="Datasets-in-use"><a href="#Datasets-in-use" class="headerlink" title="Datasets in use:"></a>Datasets in use:</h2><p>[300-W] <a href="http://ibug.doc.ic.ac.uk/resources/facial-point-annotations/" target="_blank" rel="noopener">http://ibug.doc.ic.ac.uk/resources/facial-point-annotations/</a><br>该数据集仅提供了68个特征点的数据，也就是w300类型的数据</p>
+<h2 id="How-to-use"><a href="#How-to-use" class="headerlink" title="How to use:"></a>How to use:</h2><ol>
+<li><p>从以上链接中下载300-W数据（i.e. LFPW），并放在”./data” 文件夹下。<br>然后纠正setup.m中的数据集的路径</p>
+<p>For example:</p>
+<p> options.trainingImageDataPath = ‘./data/lfpw/trainset/‘;</p>
+<p> options.trainingTruthDataPath = ‘./data/lfpw/trainset/‘;</p>
+<p> options.testingImageDataPath  = ‘./data/lfpw/testset/‘;</p>
+<p> options.testingTruthDataPath  = ‘./data/lfpw/testset/‘;</p>
+</li>
+<li><p>Download and install dependencies: libLinear, Vlfeat, mexopencv, put<br>into “./lib” folder and compile if necessary. Make sure you already<br>addpath(…) all folders in matlab.<br>Check and correct the library path in setup.m.<br>安装方法分别见：<br>libLinear：<a href="http://m.blog.csdn.net/blog/tiandijun/40929563" target="_blank" rel="noopener">http://m.blog.csdn.net/blog/tiandijun/40929563</a><br>Vlfeat：<a href="http://www.cnblogs.com/woshitianma/p/3872939.html" target="_blank" rel="noopener">http://www.cnblogs.com/woshitianma/p/3872939.html</a><br>mexopencv：<a href="http://wangcaiyong.com/2015/07/14/mexopencv/" target="_blank" rel="noopener">http://wangcaiyong.com/2015/07/14/mexopencv/</a></p>
+</li>
+<li><p>If you run first time. You should set these following parameters<br>to learn shape and variation. For later time, reset to 0.</p>
+<p>options.learningShape     = 1;<br>options.learningVariation = 1;<br>说明：第一个变量<strong>learningShape</strong>学习了数据集的平均特征点；第二个变量<strong>learningVariation</strong>学习了true_shape与mean_shape的包围盒之间差值（一个box包含四个变量x,y,width,height）的均值和方差，后期用在扰动产生更多的初始变量$x_0$.</p>
+</li>
+<li><p>Do training:</p>
+<blockquote>
+<blockquote>
+<p>run_training();</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>Do testing:</p>
+<blockquote>
+<blockquote>
+<p>do_testing();</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>遗憾的是，我们还是没有真正对程序优化内存和速度，我们在程序运行中发现，占内存最严重的变量是storage_init_desc（特征向量矩阵），试想以LFBW为例，训练集共有811张图片，如我们扰动初始值10次，将会产生8110个shape,若使用sift特征（4<em>4</em>8=128维），加之特征点数为68，则storage_init_desc的维数将是（128<em>68=8704）</em>8110，对其使用SVM方法，程序跑不动，内存占满。</p>
+</li>
+<li><p>新增函数列表</p>
+<ul>
+<li>/common/cropImage/cropImage.m</li>
+<li>/common/desc/xx_sift.m</li>
+<li>/common/flip/flipImage.m</li>
+<li>/common/io/write_w300_shape.m</li>
+<li>/source/train/learn_single_regressor2.m</li>
+</ul>
+</li>
+<li><p>关于上述修正细节请参考系列博文《Some improvements about SDM for face alignment 》</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>人脸识别</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Some improvements about SDM for face alignment (一)</title>
+    <url>/2015/08/14/sdm1/</url>
+    <content><![CDATA[<p>本篇我们阐述对<a href="https://github.com/tntrung/impSDM" target="_blank" rel="noopener">Github</a>上给出的SDM程序,我们做的一些Bug修正。关于SDM for face alignment,请参考：<br>《  <a href="http://blog.csdn.net/xiamentingtao/article/details/47306887" target="_blank" rel="noopener">Supervised Descent Method and its Applications to Face Alignment</a>》</p>
+<a id="more"></a>
+
+<p>我们的程序在开始阶段需要载入数据，由于数据层次不齐，所以需要做形状归一化。其中的一个必要操作就是裁剪图片，取出包含人脸的那部分区域。如下图：<br><img src="https://dn-xiamenwcy.qbox.me/sdm/img3_rectangle2.jpg" alt="">，<br>实际上我们不要这么大，我们只需要人脸的那部分，于是我们根据shape的包围盒并且向左上和右下拓展，扩大截取区域，得到：<img src="https://dn-xiamenwcy.qbox.me/sdm/img3_crop.jpg" alt=""><br>但是在截取过程中，我们发现对于一些人脸过于靠近边界的图片，我们的截取区域超过了图片的范围，如图：<br><img src="https://dn-xiamenwcy.qbox.me/sdm/img_rectangle3.jpg" alt=""><br>在这种情况下，<strong>一种办法</strong>就是直接把超过图片范围的区域去掉，只取剩下的这部分。这种办法简单，很多时候也可以使用，但是在我们的程序中，这种方法可能会导致在后来的迭代过程中计算出的shape超过图片范围，造成无法继续迭代的后果。所以在这种状况下，我们希望<strong>初始截取的图片人脸最好可以居于中间</strong>。我们想到了<strong>直接去填充超过图片的那部分区域即可</strong>。如下：<br><img src="https://dn-xiamenwcy.qbox.me/sdm/img1_crop.jpg" alt=""><br>这部分中可以使用Matlab的填充图像函数：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">B = padarray(A,padsize,padval,direction)</span><br><span class="line">   A为输入图像，B为填充后的图像，padsize给出了给出了填充的行数和列数，通常用[r c]来表示。padval和direction分别表示填充方法和方向。它们的具体值和描述如下：</span><br><span class="line">padval：</span><br><span class="line"><span class="string">'symmetric'</span>表示图像大小通过围绕边界进行镜像反射来扩展；</span><br><span class="line"><span class="string">'replicate'</span>表示图像大小通过复制外边界中的值来扩展；  </span><br><span class="line"><span class="string">'circular'</span>图像大小通过将图像看成是一个二维周期函数的一个周期来进行扩展。</span><br><span class="line"></span><br><span class="line"> direction：</span><br><span class="line"><span class="string">'pre'</span>表示在每一维的第一个元素前填充；</span><br><span class="line"><span class="string">'post'</span>表示在每一维的最后一个元素后填充；</span><br><span class="line"><span class="string">'both'</span>表示在每一维的第一个元素前和最后一个元素后填充，此项为默认值。</span><br><span class="line">    若参量中不包括direction，则默认值为<span class="string">'both'</span>。若参量中不包含padval，则默认用零来填充。若参量中不包括任何参数，则默认填充为零且方向为<span class="string">'both'</span>。在计算结束时，图像会被修剪成原始大小。</span><br><span class="line">举例：</span><br><span class="line">        A = [<span class="number">1</span> <span class="number">2</span>; <span class="number">3</span> <span class="number">4</span>];</span><br><span class="line">        B = padarray(A,[<span class="number">3</span> <span class="number">2</span>],<span class="string">'replicate'</span>,<span class="string">'post'</span>)</span><br></pre></td></tr></table></figure>
+<p>这部分程序在common/cropImage/cropImage.m中，用法如下：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">[ img,shape,box,t ] = cropImage( img,shape )</span><br><span class="line"><span class="comment">%Input:原始的image和shape</span></span><br><span class="line">Output:经过裁剪后的image和变换后的shape，以及包围盒、平移向量</span><br></pre></td></tr></table></figure>
+<p>最终，我们来看看效果：</p>
+<center><img src="https://dn-xiamenwcy.qbox.me/sdm/img2.jpg"></center>
+<center><img src="https://dn-xiamenwcy.qbox.me/sdm/img2_crop.jpg"></center>
+
+<center><img src="https://dn-xiamenwcy.qbox.me/sdm/image_0113.png"></center>
+<center><img src="https://dn-xiamenwcy.qbox.me/sdm/image_0113.jpg"></center>
+
+]]></content>
+      <categories>
+        <category>人脸识别</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Some improvements about SDM for face alignment (二)</title>
+    <url>/2015/08/15/sdm2/</url>
+    <content><![CDATA[<p>训练阶段我们采用了分批处理，可以优化部分内存。</p>
+<p>原先我们的代码使用一次性载入数据，然后开始若干次迭代，直至收敛。这样保存image与shape的数据矩阵Data就一直占用内存，但实际上，数据集的image与shape 的作用仅仅是计算$\Delta X$和$\Phi$，两变量的定义参考《 <a href="http://blog.csdn.net/xiamentingtao/article/details/47306887" target="_blank" rel="noopener">Supervised Descent Method and its Applications to Face Alignment</a>》，其实也就是init shape与true shape的差值以及init shape的特征向量。计算完了，Data就没用了。于是我们设想分批处理，<strong>每次迭代载入一次数据，用完了就clear</strong>。这样就需要载入多次，可能时间上会浪费的比较多，但还好，可以承受。而且<strong>每次载入数据的时候，也使用分批处理，一次只载入10幅图片的Image/shape，算完了就clear</strong>。</p>
+<a id="more"></a>
+
+<p>程序中，我们为了增加样本的数量也使用了flip image操作，你可以选择flip or not flip,可以在setup.m中设置</p>
+<pre><code>options.flipFlag  = 1;   % the flag of flipping。</code></pre><p>如下为分批处理的代码：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="comment">%确定分批的序号</span></span><br><span class="line"><span class="keyword">if</span> (isfield(options, <span class="string">'batch_size'</span>))<span class="comment">%批量处理</span></span><br><span class="line">     batch_fid = cell(<span class="built_in">ceil</span>(nData / (options.batch_size*basize)), <span class="number">1</span>);<span class="comment">% batch_index为批量处理的索引号， batch_fid为批量处理的原图片序号</span></span><br><span class="line">    <span class="keyword">for</span> bb = <span class="number">1</span>:<span class="built_in">length</span>(batch_fid)</span><br><span class="line">        batch_fid&#123;bb&#125; = ...</span><br><span class="line">            (bb<span class="number">-1</span>)*options.batch_size+<span class="number">1</span>: ...</span><br><span class="line">            <span class="built_in">min</span>(bb*options.batch_size,<span class="built_in">length</span>(imlist));</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">ndata_i=<span class="number">0</span>;<span class="comment">%nData的遍历序号</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> idata = <span class="number">1</span> : <span class="built_in">length</span>(batch_fid)</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">for</span> jdata=<span class="number">1</span>:<span class="built_in">length</span>( batch_fid&#123;idata&#125;)</span><br><span class="line">    <span class="comment">%% the information of i-th image</span></span><br><span class="line">    <span class="comment">%disp(Data(idata).img);</span></span><br><span class="line">    <span class="built_in">disp</span>([<span class="string">'Stage: '</span> num2str(options.current_cascade) <span class="string">' - Image: '</span> num2str(batch_fid&#123;idata&#125;(jdata))]);</span><br><span class="line">   </span><br><span class="line">    Data= load_single_data2 ( imgDir, ptsDir, batch_fid&#123;idata&#125;(jdata),options );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> kdata=<span class="number">1</span>:basize</span><br><span class="line">        </span><br><span class="line">        ndata_i=ndata_i+<span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        img   = Data.img_gray;</span><br><span class="line">        shape = Data.shape_gt;</span><br><span class="line">        <span class="comment">%% fipping data,左右翻转图像，用于产生更多的训练数据</span></span><br><span class="line">        <span class="keyword">if</span> kdata==<span class="number">2</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">size</span>(img,<span class="number">3</span>) &gt; <span class="number">1</span></span><br><span class="line">                img_gray   = <span class="built_in">fliplr</span>(rgb2gray(uint8(img)));</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                img_gray   = <span class="built_in">fliplr</span>(img);</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">            clear img;</span><br><span class="line">            img = img_gray;</span><br><span class="line">            clear img_gray;</span><br><span class="line"></span><br><span class="line">            shape = flipshape(shape);</span><br><span class="line">            shape(:,<span class="number">1</span>) = <span class="built_in">size</span>(img,<span class="number">2</span>) - shape(:, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span></span><br><span class="line">                <span class="built_in">figure</span>(<span class="number">1</span>); imshow(img); <span class="built_in">hold</span> on;</span><br><span class="line">                draw_shape(shape(:,<span class="number">1</span>),...</span><br><span class="line">                    shape(:,<span class="number">2</span>),<span class="string">'y'</span>);</span><br><span class="line">                <span class="built_in">hold</span> off;</span><br><span class="line">                pause;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">%% if the first cascade</span></span><br><span class="line">    <span class="keyword">if</span> ( current_cascade == <span class="number">1</span> )</span><br><span class="line">        </span><br><span class="line">        <span class="comment">%% if detect face using viola opencv</span></span><br><span class="line">        <span class="comment">%boxes = detect_face( img , options );</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">%% if using ground-truth</span></span><br><span class="line">        bbox = [];</span><br><span class="line">        </span><br><span class="line">        <span class="comment">%% predict the face box</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">isempty</span>(bbox)</span><br><span class="line">            <span class="comment">%% if using ground-truth</span></span><br><span class="line">            bbox = getbbox(shape);</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">%% randomize n positions for initial shapes</span></span><br><span class="line">        [rbbox] = random_init_position( ...</span><br><span class="line">            bbox, DataVariation, n_init_randoms,options );<span class="comment">%获得n个随机的真实人脸框，模拟人脸识别detector</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">%% iterations of n initial points</span></span><br><span class="line">        <span class="keyword">for</span> ir = <span class="number">1</span> : n_init_randoms</span><br><span class="line">            </span><br><span class="line">            <span class="comment">%% get random positions and inital shape indexs</span></span><br><span class="line">            cbbox  = rbbox(ir,:);</span><br><span class="line">            </span><br><span class="line">            init_shape = resetshape(cbbox, MeanShape2);<span class="comment">%将平均人脸（而不是初始化人脸）对齐到每个算出的真实人脸框上</span></span><br><span class="line"> </span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span></span><br><span class="line">                <span class="built_in">figure</span>(<span class="number">1</span>); imshow(img); <span class="built_in">hold</span> on;</span><br><span class="line">                rectangle(<span class="string">'Position'</span>,  cbbox, <span class="string">'EdgeColor'</span>, <span class="string">'y'</span>);</span><br><span class="line">                draw_shape(init_shape(:,<span class="number">1</span>),...</span><br><span class="line">                    init_shape(:,<span class="number">2</span>),<span class="string">'y'</span>);</span><br><span class="line">                <span class="built_in">hold</span> on;</span><br><span class="line">                rectangle(<span class="string">'Position'</span>,  bbox, <span class="string">'EdgeColor'</span>, <span class="string">'r'</span>);</span><br><span class="line">                draw_shape(shape(:,<span class="number">1</span>),...</span><br><span class="line">                    shape(:,<span class="number">2</span>),<span class="string">'r'</span>);</span><br><span class="line">                <span class="built_in">hold</span> off;</span><br><span class="line">                 pause;</span><br><span class="line">            <span class="keyword">end</span>           </span><br><span class="line">            </span><br><span class="line">            <span class="comment">%% scale coarse to fine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">            cropIm_scale = imresize(img,current_scale);</span><br><span class="line">            init_shape = init_shape * current_scale;</span><br><span class="line">            <span class="built_in">true</span>_shape    = shape      * current_scale;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span></span><br><span class="line">                <span class="built_in">figure</span>(<span class="number">1</span>); imshow(cropIm_scale); <span class="built_in">hold</span> on;</span><br><span class="line">                draw_shape(init_shape(:,<span class="number">1</span>), init_shape(:,<span class="number">2</span>),<span class="string">'g'</span>);</span><br><span class="line">                draw_shape(<span class="built_in">true</span>_shape(:,<span class="number">1</span>), <span class="built_in">true</span>_shape(:,<span class="number">2</span>),<span class="string">'r'</span>);</span><br><span class="line">                <span class="built_in">hold</span> off;</span><br><span class="line">               <span class="comment">% pause;</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            </span><br><span class="line">            storage_bbox((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                getbbox(init_shape);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">%% compute the descriptors and delta_shape %%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storing the initial shape</span></span><br><span class="line">            storage_init_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                shape_2_vec(init_shape);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storing the the descriptors</span></span><br><span class="line">            tmp = local_descriptors( cropIm_scale, ...</span><br><span class="line">                init_shape,...</span><br><span class="line">                desc_size, desc_bins, options );</span><br><span class="line">            </span><br><span class="line">            storage_init_desc((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = tmp(:);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storing delta shape</span></span><br><span class="line">            tmp_del = init_shape - <span class="built_in">true</span>_shape;</span><br><span class="line">            shape_residual = <span class="built_in">bsxfun</span>(@rdivide, tmp_del, ...</span><br><span class="line">                storage_bbox((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,<span class="number">3</span>:<span class="number">4</span>));</span><br><span class="line">            </span><br><span class="line">            storage_del_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                shape_2_vec(shape_residual);</span><br><span class="line">            </span><br><span class="line">            storage_gt_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                shape_2_vec(shape);</span><br><span class="line">             </span><br><span class="line">           <span class="comment">% storage_image&#123;(ndata_i-1)*n_init_randoms+ir&#125;=cropIm_scale;%补充项</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">% for higher cascaded levels</span></span><br><span class="line">        <span class="keyword">for</span> ir = <span class="number">1</span> : n_init_randoms</span><br><span class="line">            </span><br><span class="line">            init_shape = vec_2_shape(new_init_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:)');</span><br><span class="line">            </span><br><span class="line">            <span class="comment">%% scale coarse to fine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">            <span class="comment">%% scale coarse to fine %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">           cropIm_scale = imresize(img,current_scale);</span><br><span class="line">            init_shape = init_shape * current_scale;</span><br><span class="line">            <span class="built_in">true</span>_shape = shape      * current_scale;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">%% compute the descriptors and delta_shape %%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> <span class="number">0</span></span><br><span class="line">                <span class="built_in">figure</span>(<span class="number">1</span>); imshow(cropIm_scale); <span class="built_in">hold</span> on;</span><br><span class="line">                draw_shape(init_shape(:,<span class="number">1</span>), init_shape(:,<span class="number">2</span>),<span class="string">'g'</span>);</span><br><span class="line">                draw_shape(<span class="built_in">true</span>_shape(:,<span class="number">1</span>), <span class="built_in">true</span>_shape(:,<span class="number">2</span>),<span class="string">'r'</span>);</span><br><span class="line">                <span class="built_in">hold</span> off;</span><br><span class="line">                pause;</span><br><span class="line">            <span class="keyword">end</span>            </span><br><span class="line">            </span><br><span class="line">            storage_bbox((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                getbbox(init_shape);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">%% compute the descriptors and delta_shape %%%%%%%%%%%%%%%%%%%%</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storing the initial shape</span></span><br><span class="line">            storage_init_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                shape_2_vec(init_shape);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storing the the descriptors</span></span><br><span class="line">            tmp = local_descriptors( cropIm_scale, ...</span><br><span class="line">                init_shape,...</span><br><span class="line">                desc_size, desc_bins, options );</span><br><span class="line">            storage_init_desc((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = tmp(:);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storing delta shape</span></span><br><span class="line">            tmp_del = init_shape - <span class="built_in">true</span>_shape;</span><br><span class="line">            shape_residual = <span class="built_in">bsxfun</span>(@rdivide, tmp_del, ...</span><br><span class="line">                storage_bbox((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,<span class="number">3</span>:<span class="number">4</span>));</span><br><span class="line">            </span><br><span class="line">            storage_del_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                shape_2_vec(shape_residual);</span><br><span class="line">            </span><br><span class="line">            storage_gt_shape((ndata_i<span class="number">-1</span>)*n_init_randoms+ir,:) = ...</span><br><span class="line">                shape_2_vec(shape);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">% storage_image&#123;(ndata_i-1)*n_init_randoms+ir&#125;=cropIm_scale;%补充项</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">     <span class="keyword">end</span></span><br><span class="line">    clear img;</span><br><span class="line">    clear cropIm_scale;</span><br><span class="line">    clear shape;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    clear Data;</span><br><span class="line">   <span class="keyword">end</span>  </span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>人脸识别</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Some improvements about SDM for face alignment (三)</title>
+    <url>/2015/08/15/sdm3/</url>
+    <content><![CDATA[<p>论文<a href="https://dn-xiamenwcy.qbox.me/sdm/Extended%20Supervised%20Descent%20Method%20for%20Robust%20Face%20Alignment.pdf" target="_blank" rel="noopener">《Extended Supervised Descent Method for Robust Face Alignment》</a>对SDM方法做了扩展，使程序更鲁棒。</p>
+<a id="more"></a>
+
+<p>论文主要在三方面做了Improments,分别是：</p>
+<h2 id="Adaptive-Feature-Block"><a href="#Adaptive-Feature-Block" class="headerlink" title="Adaptive Feature Block"></a>Adaptive Feature Block</h2><p>在初始的SDM方法中，我们使用fixed-size blocks去提取SIFT特征进而预测shape。但实际上，从直观上来看，the feature extraction block size与the value of shape increment有很大关系。当shape increment比较大时，我们应该提取较大块的SIFT特征，这样就可以获取更多有用的信息，便于处理大的shape变差并且保持鲁棒性。而在shape increment比较小时，我们只需提取较小块的SIFT特征去减少噪声的比例，确保了准确性。如下图：<br><img src="https://dn-xiamenwcy.qbox.me/sdm/robust_sdm1.jpg" alt=""><br>如下图，在我们初始迭代的时候，init shape与true shape的差值比较大，因此我们需要提取较大块的SIFT特征，而随着迭代的进行，差值越来越小，因此我们需要提取较小块的SIFT特征。</p>
+<p>##Adaptive Regression<br>训练阶段，所有点的特征向量组成了$\Phi$,同样的，所有的特征点的位移组成了$\Delta X$,$R$和$b$可以通过线性回归获得。$\Phi$和$\Delta X$是所有特征点的全体，我们称这种回归为<strong>global regression</strong>.global regression保证了特征点之间的shape constraint，确保了鲁棒性，避免了迭代过程中的形状分离，这是非常重要的，尤其当prediction远离target时。</p>
+<p>尽管如此，但是global regression仍然牺牲了部分准确性去确保鲁棒性。另一种回归称为<strong>part regression</strong>,分别在人脸的各部分回归，<strong>local regression</strong>，分别在各个特征点上单独回归。</p>
+<p>初始阶段，由于estimated shape不可信，如果让各个区域分别回归，对于某些特征不明显的区域，如鼻子，它将回归到一些不好的地方，所以可以使用shape constraints强迫这部门区域回归到比较正确的地方，因此处于鲁棒性的原因，我们使用global regression.经过几次global regression,各区域基本回归到比较准确的位置，除了某些部分。这时我们使用part regression,可以将这部分不太好位置回归到比较准确的位置。最后使用local regression,作进一步的细化，提高准确性。<br><img src="https://dn-xiamenwcy.qbox.me/sdm/robust_sdm2.jpg" alt=""><br>如图。(a)图使用global regression,各部分已经回归得比较靠近准确的位置，唯独嘴巴偏得比较大。这时我们使用part regression，可以看到(b)，嘴巴已经回归得比较好了，其他各部基本不变。最后使用local regression，使整个特征点回归到更准确的位置。</p>
+<h2 id="Ragid-Regularization"><a href="#Ragid-Regularization" class="headerlink" title="Ragid Regularization"></a>Ragid Regularization</h2><p>这部分主要是对回归方程的一个常用的改进，使用Regularization处理。<br>这里 $\lambda $控制着正规化的长度，其值可以调整。比如一个单独点的HOG特征维数是128，对于由68个特征点组成的face shape，$\lambda $可达10K+。没有正规化，我们会发现线性模型倾向于<strong>过拟合</strong>。更一步的讲，正规化会引起更多的迭代次数，降低收敛的速度，如此的话我们前两步修正变得有可能。Regularization strength应该被不断调整以符合我们的由粗到精的准则，确切地说<strong>，在初始阶段，应该用较大的长度以确保得到较鲁棒的模型，后期使用较小的长度更好地拟合true shape.</strong></p>
+<p>总而言之，我们获得了更灵活鲁棒的模型：<br><img src="https://dn-xiamenwcy.qbox.me/sdm/robust_sdm3.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>人脸识别</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于stringstream 的一些坑</title>
+    <url>/2016/10/16/stringstream/</url>
+    <content><![CDATA[<p><strong>关键点一：</strong><font color="#FF0000"> <strong>同一个stringstream对象来多次处理数据，每次使用前，使用stream.str(“”);保证数据已清空。</strong></font><br><strong>例如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line">string result;</span><br><span class="line">ss &lt;&lt; 1;</span><br><span class="line">ss&gt;&gt;result;</span><br><span class="line">&#x2F;&#x2F;必须牢记使用stringstream两次输入，必须使用前清空</span><br><span class="line">ss.clear();</span><br><span class="line">ss.str(&quot;&quot;);</span><br><span class="line">ss &lt;&lt; 2;</span><br></pre></td></tr></table></figure>
+<p>又或者参看下面这段程序：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;sstream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">int main(int argc, char * argv[])</span><br><span class="line">&#123;</span><br><span class="line">	std::stringstream stream;</span><br><span class="line">	string str;</span><br><span class="line">	while (1)</span><br><span class="line">	&#123;</span><br><span class="line">		&#x2F;&#x2F;clear()，这个名字让很多人想当然地认为它会清除流的内容。 </span><br><span class="line">		&#x2F;&#x2F;实际上，它并不清空任何内容，它只是重置了流的状态标志而已！</span><br><span class="line">		stream.clear();</span><br><span class="line">		&#x2F;&#x2F; 去掉下面这行注释，清空stringstream的缓冲，每次循环内存消耗将不再增加!</span><br><span class="line">		&#x2F;&#x2F;stream.str(&quot;&quot;);      </span><br><span class="line">		stream &lt;&lt; &quot;sdfsdfdsfsadfsdafsdfsdgsdgsdgsadgdsgsdagasdgsdagsadgsdgsgdsagsadgs &quot;;</span><br><span class="line">		stream &gt;&gt; str;</span><br><span class="line">		&#x2F;&#x2F; 去掉下面两行注释，看看每次循环，你的内存消耗增加了多少！</span><br><span class="line">		cout&lt;&lt;&quot;Size of stream &#x3D; &quot;&lt;&lt;stream.str().length()&lt;&lt;endl;</span><br><span class="line">		system(&quot;PAUSE&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;PAUSE &quot;);</span><br><span class="line">	return EXIT_SUCCESS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们发现运行程序前打开任务管理器，过不了几十秒，所有的内存都将被耗尽！</p>
+<p>而把stream.str(“”); 那一行的注释去掉，再运行程序，内存就正常了。</p>
+<p>看来stringstream似乎不打算主动释放内存(或许是为了提高效率)，但如果你要在程序中用同一个流，反复读写大量的数据，将会造成大量的内存消耗，因些这时候，需要适时地清除一下缓冲 (用 stream.str(“”) )。</p>
+<p>另外不要企图用 stream.str().resize(0)，或 stream.str().clear() 来清除缓冲，使用它们似乎可以让stringstream的内存消耗不要增长得那么快，但仍然不能达到清除stringstream缓冲的效果(不信做个实验就知道了，内存的消耗还在缓慢的增长！)</p>
+<a id="more"></a>
+
+<p><strong>关键点二：</strong><font color="#FF0000"> <strong>stringstream处理字符串时，会跳过空白制表符</strong></font><br><strong>例如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;sstream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;&#x2F;</span><br><span class="line">int main(int argc, char * argv[])</span><br><span class="line">&#123;</span><br><span class="line">	std::stringstream ss;</span><br><span class="line">	string result;</span><br><span class="line">	ss &lt;&lt; &quot;hello world&quot;;</span><br><span class="line">	ss &gt;&gt; result;</span><br><span class="line">	cout &lt;&lt; result;</span><br><span class="line"></span><br><span class="line">	return EXIT_SUCCESS;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Result:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hello请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+<p>发现并没有将world输出去。这表明stringstream会跳过空白符。为了避免这种情况，可以使用两种方法：</p>
+<ul>
+<li>使用getline :<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line">string result;</span><br><span class="line">ss &lt;&lt; &quot;hello world&quot;;</span><br><span class="line">getline(ss, result);</span><br><span class="line">cout &lt;&lt; result;</span><br></pre></td></tr></table></figure></li>
+<li>使用.str() :<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line">string result;</span><br><span class="line">ss &lt;&lt; &quot;hello world&quot;;</span><br><span class="line">result &#x3D; ss.str();</span><br><span class="line">cout &lt;&lt; result;</span><br></pre></td></tr></table></figure>
+两者都可以正常输出。</li>
+</ul>
+<p><strong>关键点三：</strong><font color="#FF0000"> <strong>stringstream关于std::noskipws及std::ws的使用</strong></font><br>std::noskipws ：不要跳过空格<br>std::ws：跳过空格</p>
+<ul>
+<li>std::noskipws<br>关于上面第二条，有的人建议使用std::noskipws避免跳过空格，即：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line">ss &lt;&lt; std::noskipws;</span><br><span class="line">string result;</span><br><span class="line">ss &lt;&lt; &quot;hello world&quot;;</span><br><span class="line">ss &gt;&gt; result;</span><br><span class="line">cout &lt;&lt; result;</span><br></pre></td></tr></table></figure>
+实际发现并不起作用，因为std::noskipws的作用是当流以空格开头时，会起作用。<br>即如果改为：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line">ss &lt;&lt; std::noskipws;</span><br><span class="line">string result;</span><br><span class="line">ss &lt;&lt; &quot; hello world&quot;;</span><br><span class="line">ss &gt;&gt; result;</span><br><span class="line">cout &lt;&lt; result;</span><br></pre></td></tr></table></figure>
+将输出空格。注释掉std::noskipws，将会输出<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hello请按任意键继续. .</span><br></pre></td></tr></table></figure></li>
+<li>std::ws,可以使得using getline时去除前面的空格<br>请看如下代码：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">std::stringstream ss;</span><br><span class="line">string result;</span><br><span class="line">ss &lt;&lt; &quot; a b c&quot; ;</span><br><span class="line">&#x2F;&#x2F;ss &gt;&gt; std::ws;</span><br><span class="line">getline(ss, result);</span><br><span class="line">cout &lt;&lt; result;</span><br></pre></td></tr></table></figure>
+将会输出，注意a前面的空格仍在。以’~’代替空格说明<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~a b c请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+去掉<code>ss &gt;&gt; std::ws;</code>的注释后，变成：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">a b c请按任意键继续. . .</span><br></pre></td></tr></table></figure>
+a前面的空格变没了。</li>
+</ul>
+<h1 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h1><ol>
+<li><a href="http://stackoverflow.com/questions/16935026/stringstream-doesnt-accept-white-space" target="_blank" rel="noopener">stringstream doesn’t accept white space?</a></li>
+<li><a href="http://stackoverflow.com/questions/20045726/skip-whitespaces-with-getline" target="_blank" rel="noopener">Skip whitespaces with getline</a></li>
+<li><a href="http://blog.csdn.net/superql/article/details/7826643" target="_blank" rel="noopener">关于stringstream的格式化的注意事项(转载)</a></li>
+<li><a href="https://github.com/xuelangZF/CS_Offer/blob/master/C++/InputOutput.md" target="_blank" rel="noopener">C++ 输入输出流</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>奇异值分解（SVD）介绍</title>
+    <url>/2015/07/26/svd/</url>
+    <content><![CDATA[<p>本文是笔者在阅读众多资料，包括网上资料、教科书的基础上，编写而成。<br>其基本写作框架是：<br>1.从数学的角度，对奇异值分解做更加准确的描述，包括定义和性质；<br>2.matlab的奇异值分解函数简介；</p>
+<a id="more"></a>
+
+<h2 id="数学上的SVD"><a href="#数学上的SVD" class="headerlink" title="数学上的SVD"></a>数学上的SVD</h2><p>我们阐述关于SVD的定义。<br>【<strong>定义</strong>】令$A\in R^{m\times n}$,则存在正交矩阵 $U\in R^{m\times m}$, $V\in R^{n\times n}$使得：<br>$$ A=U\Sigma V$$，其中$$\Sigma =<br>diag(\Sigma_1,O)<br>\in R^{m\times n}$$且 $\Sigma_1=diag(\sigma_1,\sigma_2,…,\sigma_r)$<br>其对角元素按照顺序$$\sigma_1\geqslant\sigma_2\geqslant…\geqslant \sigma_r&gt;0,r=rank(A)  $$排列。<br>【<strong>性质</strong>】</p>
+<p> 一、 奇异值和特征值的关系：<br>   我们将从下面几个定理阐述：</p>
+<ol>
+<li>假设$A\in R^{n\times n}$对称，具有特征值$\lambda_i$和标准正交特征向量$u_i$。换言之<br>$A=U\Lambda U^T$是A的特征分解，其中<br>$$\Lambda =diag(\lambda_1,\lambda_2,…,\lambda_n),U=[u_1,u_2,…,u_n]$$和<br>$$ UU^T=I $$.则A的的一个SVD是$A=U\Sigma V^T$,其中$\sigma_i=|\lambda_i|,v_i=sign(\lambda_i)u_i,sign(0)=1$</li>
+</ol>
+<p>2.对称矩阵$A^TA$特征值是$\sigma_i^2$，右奇异向量$v_i$是对应的标准正交向量。</p>
+<p>3.对矩阵$AA^T$的特征值是$\sigma_i^2$和m-n个零,左奇异向量$u_i$是特征值$\sigma_i^2$对应的标准正交向量, 对特征值0可取任意m-n个正交向量作为特征向量。</p>
+<p>从以上定理来看，<font color="#FF0000">对称矩阵的特征值和奇异值相差一个符号</font> ，而$A^TA$和$AA^T$的非零特征值就是A的奇异值的平方，换言之，A的奇异值是$A^TA$和$AA^T$的非零特征值的平方根。<br>二、奇异值分解的改写。<br>1.由于V为正交矩阵，故$A^{-1}=A^T$,因此：<br> <img src="https://dn-xiamenwcy.qbox.me/svd/svd1.jpg" alt=""></p>
+<p>四、奇异值分解的变形</p>
+<ol>
+<li>$m\times n$矩阵A的共轭转置$A^H$的奇异值分解为：<br>$$ A^H=V\Sigma^TU^H$$</li>
+<li>$A^HA,AA^H$的奇异值分解分别为:<br>$$A^HA=V\Sigma^T  \Sigma  V^H$$<br>$$AA^H=U\Sigma\Sigma^T U^H$$<br>其中：<br>$$ \Sigma^T\Sigma=diag(\sigma_1^2,\sigma_2^2,…,\sigma_r^2,\overbrace{0,0,…,0}^{n-r个})$$和</li>
+</ol>
+<p>$$\Sigma\Sigma^T=diag(\sigma_1^2,\sigma_2^2,…,\sigma_r^2,\overbrace{0,0,…,0}^{m-r个})$$</p>
+<h2 id="matlab的svd函数"><a href="#matlab的svd函数" class="headerlink" title="matlab的svd函数"></a>matlab的svd函数</h2><p>matlab中有两个关于svd的函数，分别是：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">[U,S,V] = svd(X)</span><br><span class="line"> S = svds(A)</span><br></pre></td></tr></table></figure>
+<p>svd用法如下：</p>
+<pre><code>[U,S,V] = svd(X) 将产生与X维数相同的对角矩阵并且对角元非负递减,U,V为正交矩阵,使得
+X = U*S*V&apos;.
+
+S = svd(X) 将返回包含奇异值的向量。
+
+[U,S,V] = svd(X,0) 将产生&quot;economy size&quot;的分解。
+如果 X是 m*n，并且m &gt; n, 将产生U的前n列，S是n*n.
+对于m&lt;=n,,svd(X,0)等价于 svd(X).
+
+[U,S,V] = svd(X,&apos;econ&apos;) a也产生 &quot;economy size&quot;
+分解. 如果 X是 m*n，并且m &gt; n, 等价于svd(X,0). 
+对于m &lt; n,  将产生V的前m列，S是m*m. </code></pre><p>svds用法如下：</p>
+<pre><code>S = svds(A) 返回 A的6个最大奇异值.
+[U,S,V] = svds(X)返回A的奇异值和奇异向量。
+S = svds(A,K) 返回 A的K个最大奇异值.
+S = svds(A,K,SIGMA)返回K个与SIGMA最接近的奇异值. 比如 S = svds(A,K,0) 将计算K个最小的奇异值。
+[u,d,v]=svds(A,10，2)将得到与2最接近的10个特征值及其对应的特征行向量和特征列向量。</code></pre><p>上面两个函数中svd一般就可以满足需求，对于特别大规模的矩阵分解或者需要求一部分奇异值，可以使用svds。</p>
+<p>参考文献：</p>
+<ol>
+<li><a href="http://blog.csdn.net/xiahouzuoxin/article/details/41118351" target="_blank" rel="noopener">矩阵特征值分解与奇异值分解含义解析及应用</a></li>
+<li><a href="http://blog.csdn.net/ningyaliuhebei/article/details/7104951" target="_blank" rel="noopener">奇异值分解</a></li>
+<li><a href="http://wenda.chinabaike.com/b/37396/2013/1208/714610.html" target="_blank" rel="noopener">求matlab 奇异值分解函数 svd和svds的区别？</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>VS2010和Matlab混合编程 ---调试Mex文件</title>
+    <url>/2015/07/14/vs-mex/</url>
+    <content><![CDATA[<p>首先说明我的软件配置：<br><strong>Computer</strong>: Windows7 SP1 64位<br><strong>VS2010</strong>:旗舰版 SP1<br><strong>Matlab</strong>:R2012a ，64位<br>下面我们将具体讲述调试Mex文件的全过程。（<font color="#FF0000">有图有真相哟！</font> ）</p>
+<a id="more"></a>
+
+<blockquote>
+<p><strong>注意1</strong>：我们下面的做法是在64位基础上进行的，对于32位同适用，只要你注意减少某些操作即可。我们会在合适的地方进行相应的说明的，所以请放心操作。<br><strong>注意2</strong>：由于这里建立的Mex文件里包含了opencv 2.4.9，所以如下的配置也会涉及到opencv的部分设置，如include,lib路径和附加依赖项，但是如果你也想使用opencv的话，你还需设置环境变量，在Path中添加bin路径。</p>
+</blockquote>
+<h3 id="MEX的说明"><a href="#MEX的说明" class="headerlink" title="MEX的说明"></a>MEX的说明</h3><p>写MEX程序其实就是写一个DLL程序，所以你可以使用C，C++，Fortran等多种编程语言来写。</p>
+<p>编写MEX程序的编辑器可以使用MATLAB的代码编辑器，也可使用自己的C++编辑器，如VS2008等。</p>
+<p>用MATLAB的编辑器的好处是，MEX函数会加粗高亮显示，这给程序编写带来便利，<font color="#FF0000">可惜无法动态调试</font>。如用VC，<font color="#FF0000">即可编译也可调试</font>，比较方便。mex的编译结果实际上就是一个带输出函数mexFunction 的dll文件，所以会用VC编写和调试dll，就会用VC编写和调试MEX程序。</p>
+<h3 id="新建一个win32-dll空项目"><a href="#新建一个win32-dll空项目" class="headerlink" title="新建一个win32 dll空项目"></a>新建一个win32 dll空项目</h3><p>打开vs2010, 文件，新建项目，选择Visual C++，点击Win32,选择Win32控制台应用程序，填写程序名字和相应位置，如我这里填：MexTest,点击下一步，直到出现如下图：</p>
+<hr>
+<p><img src="https://dn-xiamenwcy.qbox.me/mex/dll.jpg" alt=""></p>
+<p>按照图示操作，点击完成，则新建了一个空的win32 dll项目.</p>
+<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><h4 id="32位平台上操作步骤："><a href="#32位平台上操作步骤：" class="headerlink" title="32位平台上操作步骤："></a>32位平台上操作步骤：</h4><p>点击 【项目】,选择【属性】，在【配置属性】选择【VC++目录】, 在【包含目录】，加入matlab下安装目录下\extern\include和opencv的include路径:<br>C:\opencv\build\include<br>C:\opencv\build\include\opencv<br>C:\opencv\build\include\opencv2 这三个目录。(<strong>注意</strong>:修改你自己的opencv路径)<br>【库目录】加入\extern\lib\win32\microsoft和opencv的lib路径:<br>C:\opencv\build\x86\vc10\lib<br>【链接器】-&gt;【输入】-&gt;【附加依赖项】输入：</p>
+<pre><code>libmx.lib 
+libeng.lib
+libmat.lib 
+libmex.lib
+
+opencv_ml249d.lib
+opencv_calib3d249d.lib
+opencv_contrib249d.lib
+opencv_core249d.lib
+opencv_features2d249d.lib
+opencv_flann249d.lib
+opencv_gpu249d.lib
+opencv_highgui249d.lib
+opencv_imgproc249d.lib
+opencv_legacy249d.lib
+opencv_objdetect249d.lib
+opencv_ts249d.lib
+opencv_video249d.lib
+opencv_nonfree249d.lib
+opencv_ocl249d.lib
+opencv_photo249d.lib
+opencv_stitching249d.lib
+opencv_superres249d.lib
+opencv_videostab249d.lib</code></pre><p>最后【链接器】-&gt;【常规】-&gt;【输出文件】里改成<br><code>$(OutDir)$(TargetName).mexw32</code></p>
+<h4 id="64位平台上操作步骤："><a href="#64位平台上操作步骤：" class="headerlink" title="64位平台上操作步骤："></a>64位平台上操作步骤：</h4><p>点击 【项目】,选择【属性】，【链接器】-&gt;【高级】-&gt;【目标计算机】设置成<strong>MachineX64 (/MACHINE:X64)</strong>，然后在【生成】-&gt;【配置管理器】-&gt;【活动解决方案平台(P):】,点击，选择【新建】，然后在打开的对话框中，<br>按照如下操作：<br><img src="https://dn-xiamenwcy.qbox.me/mex/x64.jpg" alt=""><br>点击确定。<br>然后继续打开项目属性，这时发现平台已改成64位，这时我们同样按照如上32平台的方法设置相应的环境。具体如下：</p>
+<ol>
+<li>【链接器】-&gt;【常规】-&gt;【输出文件】里改成<br><code>$(OutDir)$(TargetName).mexw64</code></li>
+<li>输入include,lib路径，添加附加依赖项，如下图：<br><img src="https://dn-xiamenwcy.qbox.me/mex/include.jpg" alt=""><br><img src="https://dn-xiamenwcy.qbox.me/lib.jpg" alt=""><br><img src="https://dn-xiamenwcy.qbox.me/mex/fujia.jpg" alt=""><h3 id="添加源文件"><a href="#添加源文件" class="headerlink" title="添加源文件"></a>添加源文件</h3>在源文件中新建mex文件,(<font color="#FF0000">这里的文名必须与工程名相同</font>)<br>如我的MexTest.cpp文件如下：</li>
+</ol>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Interface: convert an image to gray and return to Matlab</span></span><br><span class="line"><span class="comment">// Author : zouxy</span></span><br><span class="line"><span class="comment">// Date   : 2014-03-05</span></span><br><span class="line"><span class="comment">// HomePage : http://blog.csdn.net/zouxy09</span></span><br><span class="line"><span class="comment">// Email  : zouxy09@qq.com</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core/core.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc/imgproc.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"mex.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************************************</span></span><br><span class="line"><span class="comment">Usage: [imageMatrix] = RGB2Gray('imageFile.jpeg');</span></span><br><span class="line"><span class="comment">Input: </span></span><br><span class="line"><span class="comment">    a image file</span></span><br><span class="line"><span class="comment">OutPut: </span></span><br><span class="line"><span class="comment">    a matrix of image which can be read by Matlab</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">**********************************************************/</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">exit_with_help</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    mexPrintf(</span><br><span class="line">    <span class="string">"Usage: [imageMatrix] = DenseTrack('imageFile.jpg');\n"</span></span><br><span class="line">    );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">fake_answer</span><span class="params">(mxArray *plhs[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    plhs[<span class="number">0</span>] = mxCreateDoubleMatrix(<span class="number">0</span>, <span class="number">0</span>, mxREAL);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">RGB2Gray</span><span class="params">(<span class="keyword">char</span> *filename, mxArray *plhs[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// read the image</span></span><br><span class="line">    Mat <span class="built_in">image</span> = imread(filename);</span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">image</span>.empty()) &#123;</span><br><span class="line">        mexPrintf(<span class="string">"can't open input file %s\n"</span>, filename);</span><br><span class="line">        fake_answer(plhs);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// convert it to gray format</span></span><br><span class="line">    Mat gray;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">image</span>.channels() == <span class="number">3</span>)</span><br><span class="line">        cvtColor(<span class="built_in">image</span>, gray, CV_RGB2GRAY);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">image</span>.copyTo(gray);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// convert the result to Matlab-supported format for returning</span></span><br><span class="line">    <span class="keyword">int</span> rows = gray.rows;</span><br><span class="line">    <span class="keyword">int</span> cols = gray.cols;</span><br><span class="line">    plhs[<span class="number">0</span>] = mxCreateDoubleMatrix(rows, cols, mxREAL);</span><br><span class="line">    <span class="keyword">double</span> *imgMat;</span><br><span class="line">    imgMat = mxGetPr(plhs[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++)</span><br><span class="line">            *(imgMat + i + j * rows) = (<span class="keyword">double</span>)gray.at&lt;uchar&gt;(i, j);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mexFunction</span><span class="params">(<span class="keyword">int</span> nlhs, mxArray *plhs[], <span class="keyword">int</span> nrhs, <span class="keyword">const</span> mxArray *prhs[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(nrhs == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">char</span> filename[<span class="number">256</span>];</span><br><span class="line">        mxGetString(prhs[<span class="number">0</span>], filename, mxGetN(prhs[<span class="number">0</span>]) + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">if</span>(filename == <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            mexPrintf(<span class="string">"Error: filename is NULL\n"</span>);</span><br><span class="line">            exit_with_help();</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        RGB2Gray(filename, plhs);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        exit_with_help();</span><br><span class="line">        fake_answer(plhs);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>添加def文件<br>代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">LIBRARY</span><br><span class="line">EXPORTS mexFunction</span><br></pre></td></tr></table></figure>
+<p>按F7或者选择【生成】-&gt;【生成解决方案】,生成成功，我们就可以在<br><code>E:\opencv\c++\MexTest\x64\Debug</code>找到所需要的MexTest.mexw64了。</p>
+<h3 id="MATLAB设置"><a href="#MATLAB设置" class="headerlink" title="MATLAB设置"></a>MATLAB设置</h3><p>(1) mex 命令设置<br>运行 Matlab ，在 Matlab 的命令窗口 (Command Window) 键入<br><code>mex -setup</code><br>命令后，按回车键，安装 Matlab 编译器；<br>(2) mbuild 命令设置<br>运行 Matlab ，在 Matlab 的命令窗口 (Command Window) 键入<br><code>mbuild -setup</code><br>命令后，按回车键，安装 Matlab 编译器；<br>(3) 在 Matlab 的命令窗口 (Command Window) 键入<br><code>cd(prefdir);</code><br><code>savepath prefdir;</code><br>启动 MATLAB add-in 工具条.</p>
+<h3 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h3><p>将matlab的current folder 设置成mexw64文件所在的路径,<br>在vs2010的源代码MexTest.cpp设置断点,然后<br>vs2010-【工具】-【附加到线程】-选择MATLAB.exe,点击附加。<br>matlab下输入代码或者函数（即mexw64文件的文件名），即会跳转到vs的断点处。如这里我输入：<br><code>img = MexTest(&#39;E:\opencv\c++\1.jpg&#39;);</code><br>就会马上跳转到vs2010的源代码中，你可以使用F10进行调试了。</p>
+<p><strong>参考文献：</strong></p>
+<ul>
+<li><a href="http://blog.sina.com.cn/s/blog_a7e72e940101cti9.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_a7e72e940101cti9.html</a></li>
+<li><a href="http://www.cnblogs.com/avril/archive/2012/09/12/2681192.html" target="_blank" rel="noopener">http://www.cnblogs.com/avril/archive/2012/09/12/2681192.html</a></li>
+<li><a href="http://www.cnblogs.com/lukylu/p/4042306.html" target="_blank" rel="noopener">http://www.cnblogs.com/lukylu/p/4042306.html</a></li>
+<li><a href="http://www.cnblogs.com/avril/archive/2012/09/12/2681192.html" target="_blank" rel="noopener">http://www.cnblogs.com/avril/archive/2012/09/12/2681192.html</a></li>
+<li><a href="http://www.blogbus.com/shijuanfeng-logs/106781870.html" target="_blank" rel="noopener">http://www.blogbus.com/shijuanfeng-logs/106781870.html</a></li>
+<li><a href="http://blog.csdn.net/zouxy09/article/details/20553007" target="_blank" rel="noopener">http://blog.csdn.net/zouxy09/article/details/20553007</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Matlab</category>
+      </categories>
+      <tags>
+        <tag>Matlab</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Win7 64bit下MexOpenCV的安装，Matlab和C++&amp;OpenCV的完美结合</title>
+    <url>/2015/07/06/win7_mexopencv/</url>
+    <content><![CDATA[<p>首先说明一下我的安装环境：<br><strong>操作系统</strong>：Win7 64位 SP1<br><strong>Matlab</strong>: 2012a 64位&amp; 2013a 64位（两个版本均试验过）<br><strong>Visual Studio</strong>:2010 sp1旗舰版<br>下面介绍具体的安装方法：</p>
+<a id="more"></a>
+
+<p>##Windows SDK 7.1 的安装（Win 7 64bit，x64平台）<br>闲话少说，先准备素材。这里我已经为您准备好了一切。</p>
+<ol>
+<li><a href="https://dn-xiamenwcy.qbox.me/win7/winsdk_web.exe" target="_blank" rel="noopener">Windows SDK 7.1 安装包</a></li>
+<li><a href="https://dn-xiamenwcy.qbox.me/win7/VS10sp1-KB983509.exe" target="_blank" rel="noopener">vs2010 sp1</a></li>
+<li><a href="https://dn-xiamenwcy.qbox.me/win7/VC-Compiler-KB2519277.exe" target="_blank" rel="noopener">VC-Compiler-KB2519277</a></li>
+</ol>
+<blockquote>
+<p>注意：在安装VS2010时还自动安装了 Microsoft Visual C++ 2010 x86 Redistributable - 10.0.30319 及更高版本，一定要先卸载比 Microsoft Visual C++ 2010 x86 Redistributable - 10.0.30319 更高的版本（不包括Microsoft Visual C++ 2010 x86 Redistributable - 10.0.30319 ）。否则在安装windows sdk会出现错误。</p>
+</blockquote>
+<p>现在终于可以开始安装Windows SDK 7.1了，注意在安装时不要选择安装 VC-Compiler，其它选项默认即可。<br>然后，安装vs2010 sp1，<br>最后，安装我们事先下载好的 VC-Compiler-KB2519277 安装包，到此完成安装。</p>
+<p>—————————————分割线—————————————-</p>
+<p>如果没有安装vs 2010 sp1，按照如下顺序安装</p>
+<p>1&gt; 安装vs2010<br>2&gt; 安装 windows sdk v7.1, 安装之前确保所有vc++ x86/x64 runtime/redistributable 版本不能大于 10.0.30319. 存在则卸载<br>3&gt; 安装vs2010 sp1<br>4&gt; 安装VC-Compiler-KB2519277</p>
+<p>—————————————分割线—————————————-<br>对于一些步骤的说明：<br>1.卸载比 Microsoft Visual C++ 2010 x86 Redistributable - 10.0.30319 更高的版本的原因：<br>Windows SDK 7.1不支持Microsoft Visual C++ 2010 x86 Redistributable - 10.0.30319 以上版本。<br>2.安装Windows SDK 7.1时不直接选择安装 VC-Compiler 的原因：<br>在安装VS2010的SP1补丁时，VC-Compiler就出现了安装问题，没有解决，直接安装VC-Compiler会出错。所以跳过VC-Compiler的安装，待安装完Windows SDK 7.1后再用KB2519277安装包补上。</p>
+<p>##OpenCV的安装</p>
+<p>   我这里安装的是OpenCV2.4.9，解压缩安装在C:\opencv<br>将C:\opencv\build\x64\vc10\bin和C:\opencv\build\x86\vc10\bin都加入到系统的Path里面,修改Path路径我推荐使用一个叫<a href="http://www.cr173.com/soft/6681.html" target="_blank" rel="noopener">Rapid Environment Editor</a>的编辑器，选择管理员启动即可修改系统环境变量。</p>
+<blockquote>
+<p><strong>注意1</strong>：这里仅仅是设置了了opencv的路径，如果你想要真正在vs中使用opencv，你还需要在vc2010的属性中设置include,lib路径。可以参考<a href="http://blog.csdn.net/pinbodexiaozhu/article/details/39889995" target="_blank" rel="noopener">这篇文章。</a><br><strong>注意2</strong>： 有些文章还强调要自己编译Opencv源码，本人也曾经用Cmake编译过，但是问题很多，后来看MexOpencv的<a href="https://github.com/kyamagu/mexopencv/tree/v2.4" target="_blank" rel="noopener">官网</a>，发现直接使用opencv二进制版本也是可以的，经过本人亲测，确实可以。<br><strong>注意3</strong>： opencv选择(x86 or x64)取决于你的matlab版本是64位还是32位的，不是取决于你的windows系统。比如你运行在Windows 7 64-bit 上运行MATLAB 32-bit 和 Visual Studio 2010 Express,你应该使用 x86 的opencv. 你可能需要重启才能设置路径有效。</p>
+</blockquote>
+<p>##MexOpenCV的安装</p>
+<p>下载<a href="https://github.com/kyamagu/mexopencv/tree/v2.4" target="_blank" rel="noopener">mexopencv</a>，如果你使用git，你也可以键入：</p>
+<blockquote>
+<p>git clone git://github.com/kyamagu/mexopencv.git</p>
+</blockquote>
+<p>或者下载zip,然后解压缩，假设安装到D:\Program Files\mexopencv-2.4<br>将此文件夹加到Matlab的Path里面并保存。</p>
+<p>PS：Matlab必须是2011a及以后的版本。<br>然后键入：</p>
+<blockquote>
+<p>&gt;&gt; mex -setup  </p>
+</blockquote>
+<p>选择编译器为： <strong>Microsoft Software Development Kit (SDK) 7.1 in C:\Program Files (x86)\Microsoft Visual Studio 10.0</strong> ，而不是选择：<br> Microsoft Visual C++ 2010 in C:\Program Files (x86)\Microsoft Visual Studio 10.0 </p>
+<p>如果以前编译过MexOpenCV，记得先运行</p>
+<blockquote>
+<p>&gt;&gt; mexopencv.make(‘clean’, true)</p>
+</blockquote>
+<p>清理一遍。</p>
+<p>然后运行</p>
+<blockquote>
+<p>&gt;&gt;mexopencv.make(‘opencv_path’, ‘C:\opencv\build’)</p>
+</blockquote>
+<p>注意后面的路径中一定要包含include文件夹<br>将所有的cpp文件用mex编译一下。</p>
+<p>至此收工，可以试着去运行MexOpenCV\samples里面的例程了。<br>##MexOpenCV的测试<br>这时你可以进入mexopencv<a href="http://kyamagu.github.io/mexopencv/" target="_blank" rel="noopener">主页</a>中开始Getting started<br>比如：你可以调用Opencv的camera操作：</p>
+<pre><code>% Connect to a camera
+camera = cv.VideoCapture();
+pause(2);
+for i = 1:50
+    % Capture and show frame
+    frame = camera.read;
+    imshow(frame);
+    pause(0.3);
+end</code></pre><p>参考文献：<br>  1: <a href="http://www.cnblogs.com/youth0826/archive/2013/01/27/2878370.html" target="_blank" rel="noopener">http://www.cnblogs.com/youth0826/archive/2013/01/27/2878370.html</a><br>  2: <a href="https://github.com/kyamagu/mexopencv/tree/v2.4" target="_blank" rel="noopener">https://github.com/kyamagu/mexopencv/tree/v2.4</a><br>  3: <a href="http://www.cnblogs.com/youth0826/archive/2013/01/26/2878177.html" target="_blank" rel="noopener">http://www.cnblogs.com/youth0826/archive/2013/01/26/2878177.html</a></p>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>坚持住，不放弃</title>
+    <url>/2015/12/03/zagan/</url>
+    <content><![CDATA[<p>这些天很苦恼，做了快一年的研究生工作就要放弃了，我必须要换个题目来做了。为什么要这样，其实这也不是我情愿的，谁想花时间去做一个新的题目呢？</p>
+<p>我想诉说，但是又有何用呢？我研二开始做那个题目，期间学习了很多的技术，如Qt,C++，数据结构等等，也靠着这个找到了工作，总算是有些收获。所以还算好，不算亏。</p>
+<p>至于为什么换题目呢？原因是我的论文被顶了。我做这个项目是从去年9月份正式开始的，期间学习了很多编程的东西，因此进度比较慢，所以进展也不是很顺利。后来做到今年4月份了，我想去实习，为找工作做准备，后来实习找到了，我也就把之前的项目暂时放一放了，想着回来了以后再做。结果导师把相同的题目给了师兄。后来师兄做完了，我实习结束后也做得差不多了，但是内容、框架都很相似，所以就难以做成我的毕业论文了。</p>
+<p>听到这个消息的时候，我真是很难受。毕竟自己做了那么长时间的文章，现在却不能写到自己的毕业论文里，别提有多气愤！不过，现在我也慢慢释然了，毕竟我在上面也学到不少东西，人应该知足。</p>
+<p>接下来，还有2个月的时间，我给自己定下一个目标，一定要在过年之前，论文要基本上做出来。我现在还没有找到合适的题目，我还要做找一找，无论是几何、逼近、小波、复变、实变、泛函、数值计算等等，都要找一个题目出来，以做理论推导为主，数值模拟为辅，首先先把范飞龙博士的文章好好读一读，明天早上开始，这些天，我先仔细地读读文章，然后再一边寻找。如果能一次性做两个题目，那是最好的，也能更好地答辩。</p>
+<p>我一定要争气，让导师对我刮目相看。</p>
+<p>也许命运就是考验我们这些人，我要经得住考验，以后工作也是这样，要随时迎接各方面的转变，我在毕业前深深地明白了这个道理，我一定会好好努力的。</p>
+<p>过去的从今晚就开始翻篇了，我也不会再去碰那个程序了。就让它成为一段历史吧。</p>
+<p>今后好好努力，在图书馆或者教室自习，奋发图强，一定会成功的。加油，王财勇。<br><img src="https://dn-xiamenwcy.qbox.me/1211429_115046306132_2.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>心路</category>
+      </categories>
+  </entry>
+</search>
